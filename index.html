@@ -356,6 +356,7 @@
 <article class="page-card"><h2><a href="/best-deck-repair-st-louis.html">Best Deck Repair Services in St. Louis (2025)</a></h2><p class="snippet">St. Louis weather takes a toll on outdoor decks. From freeze-thaw damage to humidity rot, local decks need regular maintenance and repair. Here are the best deck repair specialists in the area.</p><a href="/best-deck-repair-st-louis.html" class="read-more">Read more →</a></article>
 <article class="page-card"><h2><a href="/best-deep-cleaning-clayton-mo.html">Best Deep Cleaning Services in Clayton, MO (2025)</a></h2><p class="snippet">Clayton's beautiful homes deserve exceptional care. When regular cleaning isn't enough, these deep cleaning services deliver the thorough attention your home needs.</p><a href="/best-deep-cleaning-clayton-mo.html" class="read-more">Read more →</a></article>
 </div>
+<div id="newsletter-posts"></div>
       </article>
 
       
@@ -382,6 +383,58 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      var PUB_ID = 'pub_423d3ddf-a1d5-419b-b27e-85eedfc5cfb2';
+      var PROXY = 'https://lss-app.vercel.app/api/beehiiv';
+      var SECTION_TITLE = 'Latest from the Newsletter';
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function(c) {
+          return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+        });
+      }
+
+      function loadPosts() {
+        fetch(PROXY + '?publication_id=' + PUB_ID + '&limit=12&status=published')
+          .then(function(res) { return res.ok ? res.json() : null; })
+          .then(function(json) {
+            if (!json) return;
+            var posts = (json.data || []).filter(function(p) { return p.web_url && p.title; });
+            if (!posts.length) return;
+
+            var container = document.getElementById('newsletter-posts');
+            if (!container) return;
+
+            var cards = posts.map(function(p) {
+              var date = '';
+              if (p.publish_date) {
+                date = new Date(p.publish_date * 1000).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+              }
+              var subtitle = p.subtitle || p.preview_text || '';
+              return '<article class="page-card">' +
+                '<h2><a href="' + p.web_url + '" target="_blank" rel="noopener">' + escapeHtml(p.title) + '</a></h2>' +
+                (subtitle ? '<p class="snippet">' + escapeHtml(subtitle) + '</p>' : '') +
+                (date ? '<p class="snippet" style="font-size:0.78rem;opacity:0.7;">' + date + '</p>' : '') +
+                '<a href="' + p.web_url + '" target="_blank" rel="noopener" class="read-more">Read more →</a>' +
+                '</article>';
+            }).join('');
+
+            container.innerHTML =
+              '<h2 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--color-primary); margin: 3rem 0 1rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--color-secondary);">' + SECTION_TITLE + '</h2>' +
+              '<div class="page-listing">' + cards + '</div>';
+          })
+          .catch(function() { /* fail silently — do not break the page */ });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadPosts);
+      } else {
+        loadPosts();
+      }
+    })();
+  </script>
 
 </body>
 </html>
