@@ -384,14 +384,37 @@
       <div class="newsletter-cta">
         <strong style="color:#fff">Stay in the loop.</strong><br>
         Get the best of St. Louis delivered weekly — free.<br>
-        <form action="https://www.stlgatewayliving.com/subscribe" method="get" target="_blank" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px;">
-          <input type="email" name="email" placeholder="your@email.com" required
+        <form id="stlgl-subscribe" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px;">
+          <input type="email" name="email" placeholder="your@email.com" required autocomplete="email"
             style="padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:15px;flex:1;min-width:200px;max-width:260px;color:#1A1A1A;">
+          <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true"
+            style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
           <button type="submit"
-            style="padding:10px 20px;background:#b33620;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;">
+            style="padding:10px 20px;background:#1E3A5F;color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap;">
             Subscribe Free →
           </button>
         </form>
+        <p id="stlgl-subscribe-msg" role="status" aria-live="polite" style="margin-top:10px;font-size:14px;color:#fff;min-height:1.2em;"></p>
+        <script>
+        (function(){
+          var f=document.getElementById('stlgl-subscribe'),m=document.getElementById('stlgl-subscribe-msg');
+          if(!f)return;
+          f.addEventListener('submit',function(e){
+            e.preventDefault();
+            var btn=f.querySelector('button'),email=(f.email.value||'').trim(),hp=f.company.value||'';
+            if(!email)return;
+            btn.disabled=true;btn.textContent='Subscribing…';m.style.color='#fff';m.textContent='';
+            fetch('https://lss-app.vercel.app/api/beehiiv-subscribe',{
+              method:'POST',headers:{'Content-Type':'application/json'},
+              body:JSON.stringify({email:email,publication:'stlgl',company:hp})
+            }).then(function(r){return r.json().catch(function(){return{ok:r.ok};});})
+            .then(function(d){
+              if(d&&d.ok){f.style.display='none';m.style.color='#fff';m.innerHTML='✓ Check your inbox — your free St. Louis guide is on the way.';}
+              else{btn.disabled=false;btn.textContent='Subscribe Free →';m.style.color='#ffd9d2';m.textContent=(d&&d.error)||'Something went wrong. Please try again.';}
+            }).catch(function(){btn.disabled=false;btn.textContent='Subscribe Free →';m.style.color='#ffd9d2';m.textContent='Network error. Please try again.';});
+          });
+        })();
+        </script>
       </div>
     </div>
   </footer>
