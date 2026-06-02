@@ -1,129 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="alternate" type="application/rss+xml" title="STL Gateway Living RSS" href="https://stlgatewayliving.com/feed.xml">
-  <link rel="alternate" type="application/json" title="STL Gateway Living JSON Feed" href="https://stlgatewayliving.com/feed.json">
-  <title>St. Louis Venues — STL Gateway Living</title>
-  <meta name="description" content="Every venue we cover in St. Louis, organized by neighborhood.">
-  <link rel="canonical" href="https://stlgatewayliving.com/venues/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #F8F5EE; color: #1A1A1A; font-family: 'Open Sans', sans-serif; font-size: 1.0625rem; line-height: 1.7; }
-    a { color: #1E3A5F; text-decoration: none; }
-    .masthead { background: #1E3A5F; padding: 0.85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
-    .masthead a.brand { color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; }
-    .masthead .subscribe { background: #C0A062; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.95rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
-    .container { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
-    h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.85rem; color: #0B1A2D; }
-    .intro { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #555; margin-bottom: 2.5rem; max-width: 42ch; }
-    .venues-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-    @media (min-width: 720px) { .venues-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
-    .venues-group-h { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: #0B1A2D; margin-bottom: 0.75rem; padding-bottom: 0.45rem; border-bottom: 2px solid #C0A062; }
-    .venues-group-list { list-style: none; padding: 0; }
-    .venues-group-list li { padding: 0.45rem 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
-    .venues-group-list a { font-family: 'Playfair Display', serif; font-weight: 700; color: #0B1A2D; }
-    .venues-group-list a:hover { color: #1E3A5F; }
-    .venue-type { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #999; }
-    footer { background: #1E3A5F; color: rgba(255,255,255,0.85); padding: 2.5rem 1.5rem 2rem; margin-top: 4rem; text-align: center; font-size: 0.85rem; }
-    footer a { color: #fff; }
-  </style>
-</head>
-<body>
-  <header class="masthead">
-    <a href="/" class="brand">STL Gateway Living</a>
-    <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener" class="subscribe">Subscribe</a>
-  </header>
-  <div class="container">
-    <h1>St. Louis Venues</h1>
-    <p class="intro">41 venues across 15 neighborhoods, all with editorial coverage in STL Gateway Living.</p>
-    <div class="venues-grid">
-      
-        <section class="venues-group">
-          <h2 class="venues-group-h">Central West End</h2>
-          <ul class="venues-group-list"><li><a href="/venues/cathedral-basilica-of-saint-louis.html">Cathedral Basilica of Saint Louis</a> <span class="venue-type">Place</span></li><li><a href="/venues/central-west-end.html">Central West End</a> <span class="venue-type">Neighborhood</span></li><li><a href="/venues/urban-chestnut-grove-brewery.html">Urban Chestnut Grove Brewery</a> <span class="venue-type">Brewery</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Cherokee Antique Row</h2>
-          <ul class="venues-group-list"><li><a href="/venues/cherokee-street.html">Cherokee Street</a> <span class="venue-type">Neighborhood</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Chesterfield</h2>
-          <ul class="venues-group-list"><li><a href="/venues/butterfly-house-at-faust-park.html">Butterfly House at Faust Park</a> <span class="venue-type">TouristAttraction</span></li><li><a href="/venues/faust-county-park.html">Faust County Park</a> <span class="venue-type">Park</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Clayton</h2>
-          <ul class="venues-group-list"><li><a href="/venues/blood-sand.html">Blood & Sand</a> <span class="venue-type">BarOrPub</span></li><li><a href="/venues/layla.html">Layla</a> <span class="venue-type">Restaurant</span></li><li><a href="/venues/pastaria.html">Pastaria</a> <span class="venue-type">Restaurant</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Downtown St. Louis</h2>
-          <ul class="venues-group-list"><li><a href="/venues/city-museum.html">City Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/citygarden.html">Citygarden</a> <span class="venue-type">Park</span></li><li><a href="/venues/gateway-arch.html">Gateway Arch</a> <span class="venue-type">TouristAttraction</span></li><li><a href="/venues/st-louis-union-station.html">St. Louis Union Station</a> <span class="venue-type">EventVenue</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Forest Park</h2>
-          <ul class="venues-group-list"><li><a href="/venues/forest-park.html">Forest Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/missouri-history-museum.html">Missouri History Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/saint-louis-art-museum.html">Saint Louis Art Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/saint-louis-science-center.html">Saint Louis Science Center</a> <span class="venue-type">Museum</span></li><li><a href="/venues/st-louis-zoo.html">St. Louis Zoo</a> <span class="venue-type">Zoo</span></li><li><a href="/venues/the-muny.html">The Muny</a> <span class="venue-type">EventVenue</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Grand Center</h2>
-          <ul class="venues-group-list"><li><a href="/venues/powell-hall.html">Powell Hall</a> <span class="venue-type">EventVenue</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Greater St. Louis</h2>
-          <ul class="venues-group-list"><li><a href="/venues/confluence-point-state-park.html">Confluence Point State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/endangered-wolf-center.html">Endangered Wolf Center</a> <span class="venue-type">Zoo</span></li><li><a href="/venues/katy-trail-state-park.html">Katy Trail State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/meramec-river.html">Meramec River</a> <span class="venue-type">Place</span></li><li><a href="/venues/six-flags-st-louis.html">Six Flags St. Louis</a> <span class="venue-type">TouristAttraction</span></li><li><a href="/venues/trout-lodge-at-ymca-of-the-ozarks.html">Trout Lodge at YMCA of the Ozarks</a> <span class="venue-type">Place</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Kirkwood</h2>
-          <ul class="venues-group-list"><li><a href="/venues/the-magic-house.html">The Magic House</a> <span class="venue-type">Museum</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Maplewood</h2>
-          <ul class="venues-group-list"><li><a href="/venues/schlafly-bottleworks.html">Schlafly Bottleworks</a> <span class="venue-type">Brewery</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Soulard</h2>
-          <ul class="venues-group-list"><li><a href="/venues/anheuser-busch-brewery.html">Anheuser-Busch Brewery</a> <span class="venue-type">Brewery</span></li><li><a href="/venues/soulard.html">Soulard</a> <span class="venue-type">Neighborhood</span></li><li><a href="/venues/soulard-farmers-market.html">Soulard Farmers Market</a> <span class="venue-type">Store</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">St. Louis County</h2>
-          <ul class="venues-group-list"><li><a href="/venues/castlewood-state-park.html">Castlewood State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/cliff-cave-park.html">Cliff Cave Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/creve-coeur-lake.html">Creve Coeur Lake</a> <span class="venue-type">Park</span></li><li><a href="/venues/grants-farm.html">Grant's Farm</a> <span class="venue-type">TouristAttraction</span></li><li><a href="/venues/laumeier-sculpture-park.html">Laumeier Sculpture Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/suson-park.html">Suson Park</a> <span class="venue-type">Park</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">The Hill</h2>
-          <ul class="venues-group-list"><li><a href="/venues/the-hill.html">The Hill</a> <span class="venue-type">Neighborhood</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Tower Grove</h2>
-          <ul class="venues-group-list"><li><a href="/venues/missouri-botanical-garden.html">Missouri Botanical Garden</a> <span class="venue-type">Museum</span></li><li><a href="/venues/tower-grove-park.html">Tower Grove Park</a> <span class="venue-type">Park</span></li></ul>
-        </section>
-        
-        <section class="venues-group">
-          <h2 class="venues-group-h">Valley Park</h2>
-          <ul class="venues-group-list"><li><a href="/venues/world-bird-sanctuary.html">World Bird Sanctuary</a> <span class="venue-type">Zoo</span></li></ul>
-        </section>
-        
-    </div>
-  </div>
-  <footer>
-    <div>© 2026 STL Gateway Living. All rights reserved.</div>
-    <div style="margin-top:0.4rem"><a href="mailto:stlgatewayliving@gmail.com">stlgatewayliving@gmail.com</a></div>
-  </footer>
-</body>
-</html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>St. Louis Venues — STL Gateway Living</title>
+        <meta name="description" content="Every venue we cover in St. Louis, organized by neighborhood.">
+        <link rel="canonical" href="https://stlgatewayliving.com/venues/">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+        <style>
+          *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+          body { background: #F8F5EE; color: #1A1A1A; font-family: 'Open Sans', sans-serif; font-size: 1.0625rem; line-height: 1.7; }
+          a { color: #1E3A5F; text-decoration: none; }
+          .masthead { background: #1E3A5F; padding: 0.85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+          .masthead a.brand { color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; }
+          .masthead .subscribe { background: #C0A062; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.95rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+          .container { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+          h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.85rem; color: #0B1A2D; }
+          .intro { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: #555; margin-bottom: 2.5rem; max-width: 42ch; }
+          .venues-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+          @media (min-width: 720px) { .venues-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+          .venues-group-h { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; color: #0B1A2D; margin-bottom: 0.75rem; padding-bottom: 0.45rem; border-bottom: 2px solid #C0A062; }
+          .venues-group-list { list-style: none; padding: 0; }
+          .venues-group-list li { padding: 0.45rem 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+          .venues-group-list a { font-family: 'Playfair Display', serif; font-weight: 700; color: #0B1A2D; }
+          .venues-group-list a:hover { color: #1E3A5F; }
+          .venue-type { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: #999; }
+          footer { background: #1E3A5F; color: rgba(255,255,255,0.85); padding: 2.5rem 1.5rem 2rem; margin-top: 4rem; text-align: center; font-size: 0.85rem; }
+          footer a { color: #fff; }
+        </style>
+      </head>
+      <body>
+        <header class="masthead">
+  <a href="/" class="brand">STL Gateway Living</a>
+  <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener" class="subscribe">Subscribe</a>
+</header>
+        <div class="container">
+          <h1>St. Louis Venues</h1>
+          <p class="intro">41 venues across 15 neighborhoods, all with editorial coverage in STL Gateway Living.</p>
+          <div class="venues-grid">
+      <section class="venues-group">
+        <h2 class="venues-group-h">Central West End</h2>
+        <ul class="venues-group-list"><li><a href="/venues/cathedral-basilica-of-saint-louis.html">Cathedral Basilica of Saint Louis</a> <span class="venue-type">Place</span></li><li><a href="/venues/central-west-end.html">Central West End</a> <span class="venue-type">Neighborhood</span></li><li><a href="/venues/urban-chestnut-grove-brewery.html">Urban Chestnut Grove Brewery</a> <span class="venue-type">Brewery</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Cherokee Antique Row</h2>
+        <ul class="venues-group-list"><li><a href="/venues/cherokee-street.html">Cherokee Street</a> <span class="venue-type">Neighborhood</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Chesterfield</h2>
+        <ul class="venues-group-list"><li><a href="/venues/butterfly-house-at-faust-park.html">Butterfly House at Faust Park</a> <span class="venue-type">Tourist Attraction</span></li><li><a href="/venues/faust-county-park.html">Faust County Park</a> <span class="venue-type">Park</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Clayton</h2>
+        <ul class="venues-group-list"><li><a href="/venues/blood-sand.html">Blood &amp; Sand</a> <span class="venue-type">Bar Or Pub</span></li><li><a href="/venues/layla.html">Layla</a> <span class="venue-type">Restaurant</span></li><li><a href="/venues/pastaria.html">Pastaria</a> <span class="venue-type">Restaurant</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Downtown St. Louis</h2>
+        <ul class="venues-group-list"><li><a href="/venues/city-museum.html">City Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/citygarden.html">Citygarden</a> <span class="venue-type">Park</span></li><li><a href="/venues/gateway-arch.html">Gateway Arch</a> <span class="venue-type">Tourist Attraction</span></li><li><a href="/venues/st-louis-union-station.html">St. Louis Union Station</a> <span class="venue-type">Event Venue</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Forest Park</h2>
+        <ul class="venues-group-list"><li><a href="/venues/forest-park.html">Forest Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/missouri-history-museum.html">Missouri History Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/saint-louis-art-museum.html">Saint Louis Art Museum</a> <span class="venue-type">Museum</span></li><li><a href="/venues/saint-louis-science-center.html">Saint Louis Science Center</a> <span class="venue-type">Museum</span></li><li><a href="/venues/st-louis-zoo.html">St. Louis Zoo</a> <span class="venue-type">Zoo</span></li><li><a href="/venues/the-muny.html">The Muny</a> <span class="venue-type">Event Venue</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Grand Center</h2>
+        <ul class="venues-group-list"><li><a href="/venues/powell-hall.html">Powell Hall</a> <span class="venue-type">Event Venue</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Greater St. Louis</h2>
+        <ul class="venues-group-list"><li><a href="/venues/confluence-point-state-park.html">Confluence Point State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/endangered-wolf-center.html">Endangered Wolf Center</a> <span class="venue-type">Zoo</span></li><li><a href="/venues/katy-trail-state-park.html">Katy Trail State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/meramec-river.html">Meramec River</a> <span class="venue-type">Place</span></li><li><a href="/venues/six-flags-st-louis.html">Six Flags St. Louis</a> <span class="venue-type">Tourist Attraction</span></li><li><a href="/venues/trout-lodge-at-ymca-of-the-ozarks.html">Trout Lodge at YMCA of the Ozarks</a> <span class="venue-type">Place</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Kirkwood</h2>
+        <ul class="venues-group-list"><li><a href="/venues/the-magic-house.html">The Magic House</a> <span class="venue-type">Museum</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Maplewood</h2>
+        <ul class="venues-group-list"><li><a href="/venues/schlafly-bottleworks.html">Schlafly Bottleworks</a> <span class="venue-type">Brewery</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Soulard</h2>
+        <ul class="venues-group-list"><li><a href="/venues/anheuser-busch-brewery.html">Anheuser-Busch Brewery</a> <span class="venue-type">Brewery</span></li><li><a href="/venues/soulard.html">Soulard</a> <span class="venue-type">Neighborhood</span></li><li><a href="/venues/soulard-farmers-market.html">Soulard Farmers Market</a> <span class="venue-type">Store</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">St. Louis County</h2>
+        <ul class="venues-group-list"><li><a href="/venues/castlewood-state-park.html">Castlewood State Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/cliff-cave-park.html">Cliff Cave Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/creve-coeur-lake.html">Creve Coeur Lake</a> <span class="venue-type">Park</span></li><li><a href="/venues/grants-farm.html">Grant&#x27;s Farm</a> <span class="venue-type">Tourist Attraction</span></li><li><a href="/venues/laumeier-sculpture-park.html">Laumeier Sculpture Park</a> <span class="venue-type">Park</span></li><li><a href="/venues/suson-park.html">Suson Park</a> <span class="venue-type">Park</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">The Hill</h2>
+        <ul class="venues-group-list"><li><a href="/venues/the-hill.html">The Hill</a> <span class="venue-type">Neighborhood</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Tower Grove</h2>
+        <ul class="venues-group-list"><li><a href="/venues/missouri-botanical-garden.html">Missouri Botanical Garden</a> <span class="venue-type">Museum</span></li><li><a href="/venues/tower-grove-park.html">Tower Grove Park</a> <span class="venue-type">Park</span></li></ul>
+      </section>
+      <section class="venues-group">
+        <h2 class="venues-group-h">Valley Park</h2>
+        <ul class="venues-group-list"><li><a href="/venues/world-bird-sanctuary.html">World Bird Sanctuary</a> <span class="venue-type">Zoo</span></li></ul>
+      </section>
+          </div>
+        </div>
+        <footer>
+  <div>© 2026 STL Gateway Living. All rights reserved.</div>
+  <div style="margin-top:0.4rem"><a href="mailto:stlgatewayliving@gmail.com">stlgatewayliving@gmail.com</a></div>
+</footer>
+      </body>
+      </html>
