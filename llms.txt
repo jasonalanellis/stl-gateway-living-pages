@@ -24,9 +24,26 @@ The site publishes evergreen city-guide editorial. Permanent content lives at st
 - https://stlgatewayliving.com/best-coffee-shops-st-louis.html — Best Coffee Shops in St. Louis (2026): specialty roasters in Benton Park, Central West End neighborhood staples
 - https://stlgatewayliving.com/best-parks-st-louis.html — The Best Parks and Green Spaces in St. Louis: Forest Park, Laumeier Sculpture Park, Lone Elk bison
 - https://stlgatewayliving.com/arts-scene-st-louis.html — St. Louis Art Scene: Saint Louis Art Museum, Chuck Berry's Blueberry Hill, Grand Center, City Museum
-- https://stlgatewayliving.com/weekend-activities-st-louis.html — Best Weekend Activities in St. Louis (2026): Forest Park, City Museum, Anheuser-Busch tour, Soulard Market, Cardinals game
 - https://stlgatewayliving.com/dining-st-louis.html — Dining in St. Louis: Soulard Market, Niche, Pi Pizzeria, Imo's, Ted Drewes, Bogart's BBQ
 - https://stlgatewayliving.com/moving-to-st-louis.html — Moving to St. Louis: cost of living, Cardinals culture, neighborhoods, honest guide
+
+### Category guides
+- https://stlgatewayliving.com/guides/food-and-drink.html — St. Louis Food & Drink Guide
+- https://stlgatewayliving.com/guides/things-to-do.html — Things to Do in St. Louis
+
+### Neighborhood guides
+Per-neighborhood hubs with Place schema + Wikidata links. Index: https://stlgatewayliving.com/neighborhood/
+- https://stlgatewayliving.com/neighborhood/central-west-end.html — Central West End Guide
+- https://stlgatewayliving.com/neighborhood/clayton.html — Clayton Guide
+- https://stlgatewayliving.com/neighborhood/downtown.html — Downtown St. Louis Guide
+- https://stlgatewayliving.com/neighborhood/forest-park.html — Forest Park Guide
+- https://stlgatewayliving.com/neighborhood/lafayette-square.html — Lafayette Square Guide
+- https://stlgatewayliving.com/neighborhood/soulard.html — Soulard Guide
+- https://stlgatewayliving.com/neighborhood/the-hill.html — The Hill Guide
+- https://stlgatewayliving.com/neighborhood/tower-grove.html — Tower Grove Guide
+
+### Venue directory
+41 individual St. Louis venue pages (Place/LocalBusiness schema; Wikidata + official-site sameAs). Index: https://stlgatewayliving.com/venues/
 
 ### Editorial team
 
