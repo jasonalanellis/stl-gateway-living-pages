@@ -47,4 +47,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://stl.stlgatewayliving.com/sitemap.xml
+Sitemap: https://stlgatewayliving.com/sitemap.xml
