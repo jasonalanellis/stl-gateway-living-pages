@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Louis Guides — STL Gateway Living</title>
+  <meta name="description" content="Category guides for St. Louis — food and drink, things to do, and more, edited by STL Gateway Living.">
+  <link rel="canonical" href="https://stlgatewayliving.com/guides/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #F8F5EE; color: #1A1A1A; font-family: 'Open Sans', sans-serif; font-size: 1.0625rem; line-height: 1.7; }
+    a { color: #1E3A5F; text-decoration: none; }
+    .masthead { background: #1E3A5F; padding: 0.85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
+    .masthead a.brand { color: #fff; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; }
+    .masthead .subscribe { background: #C0A062; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.95rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 3rem 1.25rem; }
+    h1 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: #0B1A2D; }
+    .intro { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; color: #555; margin-bottom: 2.5rem; max-width: 38ch; }
+    .hub-list { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+    @media (min-width: 720px) { .hub-list { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1080px) { .hub-list { grid-template-columns: 1fr 1fr 1fr; } }
+    .hub-list-card { display: block; background: #fff; border-radius: 4px; padding: 1.5rem 1.6rem; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: transform 0.18s, box-shadow 0.18s; color: inherit; }
+    .hub-list-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+    .hub-list-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; margin-bottom: 0.5rem; color: #0B1A2D; }
+    .hub-list-snippet { font-size: 0.92rem; color: #555; line-height: 1.55; }
+    footer { background: #1E3A5F; color: rgba(255,255,255,0.85); padding: 2.5rem 1.5rem 2rem; margin-top: 4rem; text-align: center; font-size: 0.88rem; }
+    footer a { color: #fff; }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <a href="/" class="brand">STL Gateway Living</a>
+    <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener" class="subscribe">Subscribe</a>
+  </header>
+  <div class="container">
+    <h1>St. Louis Guides</h1>
+    <p class="intro">Category guides curated by STL Gateway Living. Each guide bundles every article covering that corner of St. Louis life.</p>
+    <div class="hub-list">
+      <a class="hub-list-card" href="/guides/food-and-drink.html">
+        <h2 class="hub-list-title">Food &amp; Drink</h2>
+        <p class="hub-list-snippet">From Soulard Market to Niche's James Beard kitchen, Pi Pizzeria, Sump Coffee, and Ted Drewes — the full editorial collection on eating and drinking in St. Louis.</p>
+      </a>
+      <a class="hub-list-card" href="/guides/things-to-do.html">
+        <h2 class="hub-list-title">Things to Do</h2>
+        <p class="hub-list-snippet">Parks, festivals, outdoor adventures, arts, family activities, and weekend itineraries — everything STL Gateway Living has written about doing things in the city.</p>
+      </a>
+    </div>
+  </div>
+  <footer>
+    <div>© 2026 STL Gateway Living. All rights reserved.</div>
+    <div style="margin-top:0.4rem"><a href="mailto:stlgatewayliving@gmail.com">stlgatewayliving@gmail.com</a></div>
+  </footer>
+</body>
+</html>
