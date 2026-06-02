@@ -1,0 +1,224 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "STL Gateway Living",
+  "home_page_url": "https://stlgatewayliving.com/",
+  "feed_url": "https://stlgatewayliving.com/feed.json",
+  "description": "Your local guide to the best of St. Louis — things to do, dining, neighborhoods, events, and more.",
+  "items": [
+    {
+      "id": "https://stlgatewayliving.com/weekend-guide-st-louis.html",
+      "url": "https://stlgatewayliving.com/weekend-guide-st-louis.html",
+      "title": "Weekend Guide to St. Louis: 15 Things To Do",
+      "content_text": "Things to do in St. Louis this weekend: Forest Park, City Museum, Soulard Market, The Loop, Missouri History Museum, and more — 15 curated picks.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/things-to-see-and-do-st-louis.html",
+      "url": "https://stlgatewayliving.com/things-to-see-and-do-st-louis.html",
+      "title": "Things to See and Do in St. Louis (2026)",
+      "content_text": "St. Louis rewards visitors who approach it as a real city rather than a quick stopover — a place with world-class architecture, distinct neighborhoods, ins",
+      "date_published": "2026-06-02T00:00:00Z",
+      "image": "https://stlgatewayliving.com/og/things-to-see-and-do-st-louis.jpg"
+    },
+    {
+      "id": "https://stlgatewayliving.com/things-to-do-free-st-louis.html",
+      "url": "https://stlgatewayliving.com/things-to-do-free-st-louis.html",
+      "title": "Free Things to Do in St. Louis",
+      "content_text": "Discover the best free things to do in St. Louis — from Forest Park's world-class museums to the Gateway Arch grounds, free concerts, and neighborhood festivals.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/things-for-kids-to-do-st-louis.html",
+      "url": "https://stlgatewayliving.com/things-for-kids-to-do-st-louis.html",
+      "title": "Things for Kids to Do in St. Louis (2026)",
+      "content_text": "St. Louis might be the best city in the country for kids who are genuinely curious — a place where a child can hold a live butterfly, crawl through a cave,",
+      "date_published": "2026-06-02T00:00:00Z",
+      "image": "https://stlgatewayliving.com/og/things-for-kids-to-do-st-louis.jpg"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-home-tips.html",
+      "url": "https://stlgatewayliving.com/st-louis-home-tips.html",
+      "title": "st louis home tips: A Complete Guide for Savvy Homeowners",
+      "content_text": "st louis home tips: A Complete Guide for Savvy Homeowners — STL Gateway Living, St. Louis. Local Lifestyle Resource with ★ rating.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-home-tips-2.html",
+      "url": "https://stlgatewayliving.com/st-louis-home-tips-2.html",
+      "title": "St Louis home tips: A complete guide to elevating your Gateway living.",
+      "content_text": "St Louis home tips: A complete guide to elevating your Gateway living. — STL Gateway Living, St. Louis. Local Lifestyle Resource with ★ rating.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-home-renovation-tips.html",
+      "url": "https://stlgatewayliving.com/st-louis-home-renovation-tips.html",
+      "title": "St. Louis Home Renovation Tips: Mastering Your Gateway Project from Concept to Completion",
+      "content_text": "St. Louis Home Renovation Tips: Mastering Your Gateway Project from Concept to Completion — STL Gateway Living, St. Louis. Local Lifestyle Resource serving",
+      "date_published": "2026-06-02T00:00:00Z",
+      "image": "https://images.pexels.com/photos/27782261/pexels-photo-27782261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-home-cleaning-tips.html",
+      "url": "https://stlgatewayliving.com/st-louis-home-cleaning-tips.html",
+      "title": "A Complete Guide to St Louis Home Cleaning Tips for the Savvy Homeowner",
+      "content_text": "A Complete Guide to St Louis Home Cleaning Tips for the Savvy Homeowner — STL Gateway Living, St. Louis. Local Lifestyle Resource with ★ rating.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-events-guide.html",
+      "url": "https://stlgatewayliving.com/st-louis-events-guide.html",
+      "title": "St. Louis Events Guide 2026 | Annual Festivals & Celebrations",
+      "content_text": "The complete guide to annual events in St. Louis — Mardi Gras, Fair St. Louis, Cardinals season, music festivals, Greek Festival, and neighborhood celebrations.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/st-louis-day-trips.html",
+      "url": "https://stlgatewayliving.com/st-louis-day-trips.html",
+      "title": "Day Trips from St. Louis | Best Getaways Within 3 Hours",
+      "content_text": "The best day trips from St. Louis — Hermann wine country, Grafton river town, Meramec Caverns, Cahokia Mounds, Ste. Genevieve, and more within 3 hours.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/post-construction-cleaning-st-louis.html",
+      "url": "https://stlgatewayliving.com/post-construction-cleaning-st-louis.html",
+      "title": "Post-Construction Cleaning St. Louis — Complete 2026 Guide",
+      "content_text": "Post-construction cleaning St. Louis: 3-phase HEPA silica extraction, Hygiene Clearance Report, COI same-day. Compare services, costs, and what GCs require. Updated 2026.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/outdoor-things-to-do-st-louis.html",
+      "url": "https://stlgatewayliving.com/outdoor-things-to-do-st-louis.html",
+      "title": "Outdoor Things to Do in St. Louis (2026)",
+      "content_text": "St. Louis is an outdoor city that doesn't always get credit for it — 1,300-acre parks, river confluences, Ozark foothills, kayak rivers, biergartens, and o",
+      "date_published": "2026-06-02T00:00:00Z",
+      "image": "https://stlgatewayliving.com/og/outdoor-things-to-do-st-louis.jpg"
+    },
+    {
+      "id": "https://stlgatewayliving.com/moving-to-st-louis.html",
+      "url": "https://stlgatewayliving.com/moving-to-st-louis.html",
+      "title": "Moving to St. Louis: The Honest Guide to The Lou",
+      "content_text": "Low cost of living, Cardinals culture, great neighborhoods from Clayton to Soulard — here's everything you need to know before moving to St. Louis.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/guides/things-to-do.html",
+      "url": "https://stlgatewayliving.com/guides/things-to-do.html",
+      "title": "Things to Do in St. Louis — STL Gateway Living",
+      "content_text": "The complete guide to things to do in St. Louis — parks, events, free attractions, outdoor adventures, arts, family activities, and weekend itineraries.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/guides/food-and-drink.html",
+      "url": "https://stlgatewayliving.com/guides/food-and-drink.html",
+      "title": "St. Louis Food & Drink Guide — STL Gateway Living",
+      "content_text": "The definitive St. Louis food and drink guide — from Soulard Market and The Hill's trattorias to Sump Coffee, Pi Pizzeria, and Ted Drewes frozen custard.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/family-things-to-do-st-louis.html",
+      "url": "https://stlgatewayliving.com/family-things-to-do-st-louis.html",
+      "title": "Family Things to Do in St. Louis (2026)",
+      "content_text": "St. Louis is one of the great Midwest weekend destinations for families — a city where world-class attractions are often free, neighborhoods reward explori",
+      "date_published": "2026-06-02T00:00:00Z",
+      "image": "https://stlgatewayliving.com/og/family-things-to-do-st-louis.jpg"
+    },
+    {
+      "id": "https://stlgatewayliving.com/family-activities-st-louis.html",
+      "url": "https://stlgatewayliving.com/family-activities-st-louis.html",
+      "title": "Best Family Activities in St. Louis",
+      "content_text": "The best family activities in St. Louis — free zoo, Science Center, City Museum, Grant's Farm, Magic House, Six Flags, and more. Most are free or very affordable.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/dining-st-louis.html",
+      "url": "https://stlgatewayliving.com/dining-st-louis.html",
+      "title": "Dining in St. Louis: Where The Lou Eats Best",
+      "content_text": "From Soulard Market to Niche's James Beard kitchen, Pi Pizzeria, Ted Drewes, and Bogart's BBQ — the definitive guide to dining in St. Louis.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-wood-rot-repair-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-wood-rot-repair-st-louis.html",
+      "title": "Best Wood Rot Repair Services in St. Louis (2025)",
+      "content_text": "Wood rot is one of the most common and damaging problems affecting St. Louis homes. We've identified the top wood rot repair specialists who can restore yo",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-restaurants-clayton-mo.html",
+      "url": "https://stlgatewayliving.com/best-restaurants-clayton-mo.html",
+      "title": "Best Restaurants in Clayton, MO (2025)",
+      "content_text": "Clayton is St. Louis's most sophisticated dining suburb — a compact downtown packed with nationally recognized restaurants, neighborhood bistros, and the k",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-post-construction-cleaning-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-post-construction-cleaning-st-louis.html",
+      "title": "Best Post-Construction Cleaning Services in St. Louis (2026)",
+      "content_text": "Just finished a renovation or new construction project? Post-construction cleaning requires specialized expertise to safely remove debris, dust, and residu",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-places-to-live-in-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-places-to-live-in-st-louis.html",
+      "title": "Best places to live in St Louis: A Complete Guide to Finding Them.",
+      "content_text": "Best places to live in St Louis: A Complete Guide to Finding Them. — STL Gateway Living, St. Louis. Local Lifestyle Resource with ★ rating.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-parks-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-parks-st-louis.html",
+      "title": "The Best Parks and Green Spaces in St. Louis",
+      "content_text": "Discover St. Louis's best parks — from Forest Park (bigger than Central Park) to Tower Grove and Laumeier Sculpture Park.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-move-out-cleaning-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-move-out-cleaning-st-louis.html",
+      "title": "Best Move-Out Cleaning Services in St. Louis (2026)",
+      "content_text": "Moving out is stressful enough without worrying about cleaning. We've identified the top move-out cleaning services in St. Louis that can help you get your",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-house-cleaning-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-house-cleaning-st-louis.html",
+      "title": "Best House Cleaning Services in St. Louis (2026)",
+      "content_text": "Looking for reliable house cleaning in St. Louis? We researched dozens of local cleaning companies to bring you the top 5 services that consistently delive",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-family-activities-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-family-activities-st-louis.html",
+      "title": "Best Family Activities in St. Louis (2025)",
+      "content_text": "St. Louis is one of the Midwest's great family cities — packed with world-class free attractions, historic neighborhoods, and weekend adventures that work",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-deep-cleaning-clayton-mo.html",
+      "url": "https://stlgatewayliving.com/best-deep-cleaning-clayton-mo.html",
+      "title": "Best Deep Cleaning Services in Clayton, MO (2026)",
+      "content_text": "Clayton's beautiful homes deserve exceptional care. When regular cleaning isn't enough, these deep cleaning services deliver the thorough attention your ho",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-deck-repair-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-deck-repair-st-louis.html",
+      "title": "Best Deck Repair Services in St. Louis (2025)",
+      "content_text": "St. Louis weather takes a toll on outdoor decks. From freeze-thaw damage to humidity rot, local decks need regular maintenance and repair. Here are the bes",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/best-coffee-shops-st-louis.html",
+      "url": "https://stlgatewayliving.com/best-coffee-shops-st-louis.html",
+      "title": "Best Coffee Shops in St. Louis (2026)",
+      "content_text": "Best coffee shops in St. Louis: Sump, Blueprint, Comet Coffee, Kaldi's, and Northwest Roasting. A neighborhood guide to the city's best cafes in 2026.",
+      "date_published": "2026-06-02T00:00:00Z"
+    },
+    {
+      "id": "https://stlgatewayliving.com/arts-scene-st-louis.html",
+      "url": "https://stlgatewayliving.com/arts-scene-st-louis.html",
+      "title": "St. Louis's Art Scene Is Better Than You Think",
+      "content_text": "From free world-class museums to live music venues, St. Louis has one of the most underrated arts scenes in the Midwest.",
+      "date_published": "2026-06-02T00:00:00Z"
+    }
+  ]
+}

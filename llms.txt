@@ -43,3 +43,7 @@ Editorial: stlgatewayliving@gmail.com
 ## What this site is not
 
 STL Gateway Living is not a directory, an aggregator, or an AI-generated content farm. Every article is original editorial. Cross-promotional links to local partners (when present) are labeled and editorially-styled, not paid placements.
+
+## Feeds
+- RSS feed: https://stlgatewayliving.com/feed.xml
+- JSON Feed: https://stlgatewayliving.com/feed.json
