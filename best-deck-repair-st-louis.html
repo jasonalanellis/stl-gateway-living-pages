@@ -11,7 +11,7 @@
   <meta property="og:title" content="Best Deck Repair Services in St. Louis (2025)">
   <meta property="og:description" content="St. Louis weather takes a toll on outdoor decks. From freeze-thaw damage to humidity rot, local decks need regular maintenance and repair. Here are the bes">
   <meta property="og:site_name" content="STL Gateway Living">
-  <meta property="og:url" content="https://stl.stlgatewayliving.com/">
+  <meta property="og:url" content="https://stl.stlgatewayliving.com/best-deck-repair-st-louis.html">
   
 
   
@@ -28,333 +28,696 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================
-       CSS Custom Properties
-       ============================ */
+    /* ============================================================
+       Brand tokens — overridden by child template
+       ============================================================ */
     :root {
-      --color-primary:    #1E3A5F;  /* Gateway Blue */
-      --color-secondary:  #C0A062;  /* Arch Gold */
-      --color-accent:     #E85D04;  /* Cardinals Red */
-      --color-bg:         #FAFAFA;
+      
+      /* STLGL — Gateway Blue, Arch Gold, Cardinals Red */
+      --color-primary:    #1E3A5F;
+      --color-primary-700: #122745;
+      --color-primary-50:  #EAF0F7;
+      --color-secondary:  #C0A062;
+      --color-secondary-700: #9A7F47;
+      --color-accent:     #E85D04;
+      --color-accent-50:  #FCE8DA;
+      --color-paper:      #F8F5EE;  /* warm parchment */
+      --color-ink:        #0B1A2D;
       --color-surface:    #FFFFFF;
       --color-text:       #1A1A1A;
-      --color-text-muted: #6B7280;
-      --color-border:     #E5E7EB;
+      --color-text-muted: #5C5A52;
+      --color-border:     #DDD7C5;
+      --color-editor-pick-bg: #FAF3E0;
+
       --font-heading:     'Montserrat', sans-serif;
       --font-body:        'Open Sans', sans-serif;
-      --font-accent:      'Playfair Display', serif;
-      --max-width:        860px;
-      --radius:           8px;
+      --font-accent:      'Playfair Display', Georgia, serif;
+
+      /* STLGL = newspaper feel — squared corners, harder edges */
+      --radius-card:      4px;
+      --radius-pill:      4px;
+
+      --max-width-article:  720px;
+      --max-width-sidebar:  280px;
+      --max-width-home:     1180px;
+      --max-width-hero:     1600px;
+
+      --eyebrow-color:     var(--color-secondary);
+      --eyebrow-letter-spacing: 0.22em;
+
+      /* Cool ink hero scrim */
+      --hero-scrim:       linear-gradient(180deg, transparent 35%, rgba(11,26,45,0.72) 78%, rgba(11,26,45,0.94) 100%);
+
     }
 
-    /* ============================
-       Reset + Base
-       ============================ */
+    /* ============================================================
+       Reset
+       ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; scroll-behavior: smooth; }
     body {
-      background: var(--color-bg);
+      background: var(--color-paper);
       color: var(--color-text);
       font-family: var(--font-body);
+      font-size: 1.0625rem;
       line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: var(--color-primary); }
-    a:hover { color: var(--color-accent); }
+    a:hover { color: var(--color-secondary); }
 
-    /* ============================
-       Header / Nav
-       ============================ */
-    .site-header {
+    /* ============================================================
+       Scroll progress hairline
+       ============================================================ */
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px;
+      width: 0%; background: var(--color-secondary);
+      z-index: 200; transition: width 0.06s linear;
+    }
+
+    /* ============================================================
+       Masthead
+       ============================================================ */
+    .masthead {
       background: var(--color-primary);
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      padding: 0.85rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      transition: padding 0.18s ease;
     }
-    .site-header .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    body.masthead-mini .masthead { padding: 0.45rem 1.5rem; }
+    body.masthead-mini .masthead .tagline { display: none; }
+    .masthead .logo-wrap {
+      display: flex; align-items: center; gap: 0.75rem;
       text-decoration: none;
     }
-    .site-header .logo-img {
-      height: 40px;
-      width: auto;
+    .masthead .logo-img { height: 38px; width: auto; }
+    .masthead .brand-name {
+      color: #FFFFFF; font-family: var(--font-accent);
+      font-weight: 700; font-size: 1.15rem;
+      letter-spacing: 0.01em;
     }
-    .site-header .brand-name {
-      color: var(--color-secondary);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: 0.02em;
-    }
-    .site-header .tagline {
-      color: rgba(255,255,255,0.7);
-      font-size: 0.78rem;
-      font-family: var(--font-body);
+    .masthead .tagline {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.78rem; font-family: var(--font-body);
       display: none;
+      font-style: italic;
     }
-    @media (min-width: 600px) {
-      .site-header .tagline { display: block; }
-    }
-    .site-header .header-cta a {
+    @media (min-width: 720px) { .masthead .tagline { display: block; } }
+    .masthead .header-cta a {
       background: var(--color-secondary);
-      color: var(--color-primary);
-      text-decoration: none;
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 4px;
-      transition: background 0.2s;
+      color: #FFFFFF; text-decoration: none;
+      font-family: var(--font-heading); font-weight: 600;
+      font-size: 0.78rem; padding: 0.45rem 0.95rem;
+      border-radius: 4px; transition: background 0.2s;
+      letter-spacing: 0.04em; text-transform: uppercase;
     }
-    .site-header .header-cta a:hover { background: #d4b575; }
+    .masthead .header-cta a:hover { background: var(--color-secondary-700); }
 
-    /* ============================
-       Page wrapper
-       ============================ */
-    .page-wrapper {
-      max-width: var(--max-width);
+    /* ============================================================
+       Article hero — full bleed
+       ============================================================ */
+    .article-hero {
+      position: relative;
+      width: 100%;
+      max-width: var(--max-width-hero);
       margin: 0 auto;
-      padding: 2rem 1.25rem;
+      overflow: hidden;
     }
-
-    /* ============================
-       Article meta line
-       ============================ */
-    .article-meta {
-      font-size: 0.82rem;
-      color: var(--color-text-muted);
-      margin-bottom: 2rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .article-hero .hero-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--color-ink);
     }
-    .article-meta .date::before { content: "📅 "; }
-    .article-meta .read-time::before { content: "⏱ "; }
-
-    /* ============================
-       Content typography
-       ============================ */
-    .article-content h1 {
-      font-family: var(--font-accent);
-      font-size: 2rem;
-      line-height: 1.25;
-      color: var(--color-primary);
-      margin-bottom: 0.5rem;
+    .article-hero img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center;
     }
-    .article-content h2 {
+    .article-hero .hero-scrim {
+      position: absolute; inset: 0;
+      background: var(--hero-scrim);
+      pointer-events: none;
+    }
+    .article-hero .hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2rem 1.5rem 2.25rem;
+      color: #fff;
+      max-width: var(--max-width-home);
+      margin: 0 auto;
+    }
+    .article-hero .hero-eyebrow {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--color-primary);
-      margin: 2.5rem 0 0.75rem;
-      padding-bottom: 0.3rem;
+      font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 0.85rem;
+      display: inline-block;
+      padding-bottom: 0.2rem;
       border-bottom: 2px solid var(--color-secondary);
     }
-    .article-content h3 {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin: 1.75rem 0 0.5rem;
+    .article-hero h1.hero-h1 {
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: clamp(2rem, 5.5vw, 4rem);
+      line-height: 1.06;
+      color: #fff;
+      text-shadow: 0 2px 18px rgba(0,0,0,0.45);
+      margin: 0 0 0.6rem;
+      max-width: 24ch;
     }
+    .article-hero .hero-deck {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(0.95rem, 1.6vw, 1.25rem);
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+      max-width: 56ch;
+    }
+    @media (min-width: 800px) {
+      .article-hero .hero-content { padding: 2.5rem 2rem 2.75rem; }
+    }
+
+    /* ============================================================
+       Article meta strip (below hero)
+       ============================================================ */
+    .meta-strip {
+      max-width: var(--max-width-home);
+      margin: 0.85rem auto 0;
+      padding: 0 1.5rem;
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 0.85rem;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.04em;
+    }
+    .meta-strip .meta-eyebrow {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: var(--eyebrow-color);
+    }
+    .meta-strip .dot { opacity: 0.5; }
+
+    /* ============================================================
+       Sticky TOC chip bar
+       ============================================================ */
+    .toc-chipbar {
+      position: sticky;
+      top: 64px;
+      background: rgba(250,250,250,0.94);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 0.55rem 1rem;
+      z-index: 80;
+      margin: 1.5rem auto 0;
+      max-width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    body.masthead-mini .toc-chipbar { top: 48px; }
+    .toc-chipbar::-webkit-scrollbar { height: 4px; }
+    .toc-chipbar::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+    .toc-chip {
+      display: inline-block;
+      padding: 0.32rem 0.78rem;
+      margin-right: 0.4rem;
+      border-radius: var(--radius-pill);
+      background: #fff;
+      border: 1px solid var(--color-border);
+      font-family: var(--font-heading);
+      font-size: 0.76rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .toc-chip:hover {
+      background: var(--color-paper);
+      color: var(--color-text);
+      border-color: var(--color-text-muted);
+    }
+    .toc-chip.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+    .toc-chip-num {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--eyebrow-color);
+      margin-right: 0.3rem;
+    }
+    .toc-chip.active .toc-chip-num { color: rgba(255,255,255,0.92); }
+
+    /* ============================================================
+       Page wrapper
+       ============================================================ */
+    .page-wrapper {
+      max-width: var(--max-width-article);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    .page-wrapper.is-home {
+      max-width: var(--max-width-home);
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    /* ============================================================
+       Article content typography
+       ============================================================ */
+    .article-content { counter-reset: section; }
+    /* Hide the markdown H1 — it's already in the hero overlay */
+    .article-content > h1:first-child { display: none; }
+
+    .article-content h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.65rem;
+      line-height: 1.25;
+      color: var(--color-primary);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.005em;
+    }
+
+    /* Numbered chip cards — H3 becomes a 2-col grid with big numeral on the left */
+    .article-content h3 {
+      counter-increment: section;
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      column-gap: 1.25rem;
+      align-items: baseline;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin: 3.25rem 0 0.85rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+      scroll-margin-top: 130px;
+    }
+    .article-content h3::before {
+      content: counter(section, decimal-leading-zero);
+      grid-column: 1;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 3.5rem;
+      line-height: 0.9;
+      color: var(--eyebrow-color);
+      align-self: start;
+    }
+    .article-content h3 > * { grid-column: 2; }
+    /* Ensure plain text content (no inner span) appears in column 2 */
+    .article-content h3 { padding-left: 0; }
+
     .article-content h4 {
       font-family: var(--font-heading);
       font-weight: 600;
-      font-size: 1rem;
-      margin: 1.25rem 0 0.4rem;
+      font-size: 1.05rem;
+      color: var(--color-text);
+      margin: 1.5rem 0 0.4rem;
     }
-    .article-content p { margin-bottom: 1rem; }
+
+    .article-content p {
+      margin-bottom: 1.05rem;
+      font-size: 1.075rem;
+      line-height: 1.72;
+    }
+
+    /* Drop cap on the FIRST paragraph after the H2 (skip intro deck) — and also on the first paragraph overall (the intro), if it follows the hidden H1 */
+    .article-content > p:first-of-type::first-letter {
+      float: left;
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 4.25rem;
+      line-height: 0.88;
+      padding: 0.4rem 0.65rem 0 0;
+      color: var(--color-primary);
+    }
+
+    /* Italic intro paragraph (the *subtitle* from markdown) — emphasized but distinct from body */
+    .article-content > p > em:only-child {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+    }
+
     .article-content ul, .article-content ol {
       margin: 0.75rem 0 1rem 1.5rem;
     }
     .article-content li { margin-bottom: 0.35rem; }
     .article-content strong { font-weight: 600; color: var(--color-text); }
-    .article-content em { font-style: italic; color: var(--color-text-muted); }
+    .article-content em { font-style: italic; }
+
+    /* Section break HR — refined editorial divider */
     .article-content hr {
       border: none;
-      border-top: 1px solid var(--color-border);
-      margin: 2rem 0;
+      height: 12px;
+      margin: 2.25rem auto;
+      max-width: 80px;
+      background: 
+        linear-gradient(180deg, var(--color-secondary) 0%, var(--color-secondary) 1px, transparent 1px, transparent 5px, var(--color-secondary) 5px, var(--color-secondary) 6px, transparent 6px) center/100% 6px no-repeat
+;
+      opacity: 0.7;
     }
-    .article-content blockquote {
-      border-left: 4px solid var(--color-secondary);
-      padding: 0.75rem 1rem;
-      margin: 1.5rem 0;
-      background: #F9F5EC;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      font-style: italic;
-    }
-    .article-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-    }
-    .article-content th {
-      background: var(--color-primary);
-      color: #fff;
-      font-family: var(--font-heading);
-      font-size: 0.9rem;
-      padding: 0.6rem 0.8rem;
-      text-align: left;
-    }
-    .article-content td {
-      padding: 0.5rem 0.8rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .article-content tr:nth-child(even) td { background: #F3F4F6; }
-    .article-content a { text-decoration: underline; }
 
-    /* ============================
-       Index page listing
-       ============================ */
-    .page-listing { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
-    .page-card {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: box-shadow 0.2s;
-    }
-    .page-card:hover { box-shadow: 0 4px 12px rgba(30,58,95,0.12); }
-    .page-card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; border: none; padding: 0; }
-    .page-card h2 a { text-decoration: none; }
-    .page-card h2 a:hover { text-decoration: underline; }
-    .page-card .snippet { font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
-    .page-card .read-more { font-size: 0.85rem; font-weight: 600; color: var(--color-accent); text-decoration: none; }
-    .page-card .read-more:hover { text-decoration: underline; }
-
-    /* ============================
-       Featured Provider CTA aside
-       ============================ */
-    .featured-provider {
-      background: linear-gradient(135deg, var(--color-primary) 0%, #2a4f82 100%);
-      color: #fff;
-      border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-      margin: 3rem 0 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .featured-provider .fp-label {
+    /* "Good for:" pill — publisher transforms `<p><strong>Good for:</strong> X</p>` into `<aside class="good-for-pill"><span>Good for</span> X</aside>` */
+    .good-for-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1.5rem;
+      padding: 0.45rem 0.95rem 0.45rem 0.55rem;
+      background: var(--color-accent-50);
+      border: 1px solid var(--color-accent);
+      border-radius: var(--radius-pill);
       font-family: var(--font-heading);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-secondary);
-    }
-    .featured-provider .fp-title {
-      font-family: var(--font-accent);
-      font-size: 1.4rem;
+      font-size: 0.8rem;
+      color: var(--color-text);
       line-height: 1.3;
     }
-    .featured-provider .fp-body {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-    .featured-provider .fp-cta a {
+    .good-for-pill span {
       display: inline-block;
-      background: var(--color-secondary);
-      color: var(--color-primary);
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.68rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-pill);
+    }
+
+    /* Blockquote — pull-quote treatment */
+    .article-content blockquote, .pull-quote {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+      line-height: 1.4;
+      color: var(--color-text);
+      text-align: center;
+      max-width: 56ch;
+      margin: 3rem auto;
+      padding: 1.85rem 1.5rem;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+    
+    .pull-quote::before, .pull-quote::after {
+      content: '❮';
+      display: block;
+      font-family: var(--font-accent);
+      font-size: 1.8rem;
+      color: var(--color-secondary);
+      line-height: 1;
+      margin: 0 auto 0.6rem;
+      width: auto;
+      height: auto;
+      background: none;
+    }
+    .pull-quote::after { content: '❯'; margin: 0.6rem auto 0; }
+
+
+    .article-content a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+    /* ============================================================
+       Quiet editorial partner endorsement — replaces gradient ad blob
+       ============================================================ */
+    .local-rec {
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 2.5rem 1rem;
+      margin: 4rem auto 2rem;
+      text-align: center;
+      max-width: var(--max-width-article);
+    }
+    .lr-label {
       font-family: var(--font-heading);
       font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background 0.2s;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1.1rem;
     }
-    .featured-provider .fp-cta a:hover { background: #d4b575; }
+    .lr-quote {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.35rem;
+      line-height: 1.45;
+      color: var(--color-text);
+      max-width: 48ch;
+      margin: 0 auto 1.15rem;
+    }
+    .lr-link {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      border-bottom: 1.5px solid var(--color-secondary);
+      padding-bottom: 3px;
+      transition: color 0.15s;
+    }
+    .lr-link:hover { color: var(--color-secondary); }
 
-    /* ============================
+    /* ============================================================
+       Home page — asymmetric magazine grid + image cards
+       ============================================================ */
+    .home-eyebrow {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-text-muted);
+      text-align: center;
+      margin: 1.5rem 0 1rem;
+    }
+    .home-tagline {
+      font-family: var(--font-accent);
+      font-weight: 400;
+      font-style: italic;
+      font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+      line-height: 1.35;
+      color: var(--color-text);
+      text-align: center;
+      max-width: 36ch;
+      margin: 0 auto 2.5rem;
+    }
+    .magazine-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 720px) {
+      .magazine-grid { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+    }
+    @media (min-width: 1080px) {
+      .magazine-grid {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+      }
+      .magazine-grid .card-lead { grid-column: span 8; grid-row: span 2; }
+      .magazine-grid .card-wide { grid-column: span 12; }
+      .magazine-grid .card-support { grid-column: span 4; }
+    }
+    .page-card {
+      display: block;
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--color-text);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+    }
+    .page-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+    }
+    .page-card .card-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: var(--color-primary);
+      overflow: hidden;
+    }
+    .page-card.card-lead .card-img-wrap { aspect-ratio: 16 / 10; }
+    .page-card.card-wide .card-img-wrap { aspect-ratio: 21 / 9; }
+    .page-card.card-support .card-img-wrap { aspect-ratio: 4 / 3; }
+    .page-card .card-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .page-card:hover .card-img-wrap img { transform: scale(1.04); }
+    .page-card .card-body {
+      padding: 1.35rem 1.4rem 1.5rem;
+    }
+    .page-card.card-lead .card-body { padding: 1.6rem 1.75rem 1.85rem; }
+    .page-card .card-eyebrow {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      text-transform: uppercase;
+      color: var(--eyebrow-color);
+      margin-bottom: 0.55rem;
+    }
+    .page-card h2 {
+      font-family: var(--font-accent);
+      font-weight: 700;
+      font-size: 1.35rem;
+      line-height: 1.22;
+      color: var(--color-text);
+      margin-bottom: 0.55rem;
+    }
+    .page-card.card-lead h2 { font-size: 1.85rem; }
+    .page-card.card-wide h2 { font-size: 1.55rem; }
+    .page-card .snippet {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.55;
+    }
+    .page-card.card-lead .snippet { font-size: 1rem; }
+
+    /* ============================================================
        Footer
-       ============================ */
+       ============================================================ */
     .site-footer {
       background: var(--color-primary);
-      color: rgba(255,255,255,0.75);
-      padding: 2rem 1.25rem;
-      margin-top: 4rem;
-      font-size: 0.85rem;
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 1.5rem 2rem;
+      margin-top: 5rem;
+      font-size: 0.88rem;
     }
     .site-footer .footer-inner {
-      max-width: var(--max-width);
+      max-width: var(--max-width-home);
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr;
       gap: 1.5rem;
-      justify-content: space-between;
-      align-items: flex-start;
+      align-items: start;
+    }
+    @media (min-width: 720px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     }
     .site-footer .footer-brand {
-      font-family: var(--font-heading);
+      font-family: var(--font-accent);
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--color-secondary);
-      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
     }
-    .site-footer a { color: var(--color-secondary); text-decoration: none; }
-    .site-footer a:hover { text-decoration: underline; }
-    .site-footer .newsletter-cta {
-      font-style: italic;
-      font-size: 0.82rem;
+    .site-footer a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+    .site-footer a:hover { border-bottom-color: var(--color-secondary); }
+    .site-footer .newsletter-block { font-size: 0.92rem; }
+    .site-footer .newsletter-block strong { color: #fff; font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+
+    /* ============================================================
+       Mobile polish
+       ============================================================ */
+    @media (max-width: 600px) {
+      html { font-size: 17px; }
+      body { line-height: 1.65; }
+      .page-wrapper { padding: 1.25rem 1rem 2rem; max-width: 100%; }
+      .masthead { padding: 0.65rem 1rem; }
+      .masthead .brand-name { font-size: 1rem; }
+      .toc-chipbar { top: 56px; padding: 0.4rem 0.75rem; }
+      .article-hero .hero-img-wrap { aspect-ratio: 4 / 5; }
+      .article-hero .hero-content { padding: 1.5rem 1.15rem 1.65rem; }
+      .article-content > p:first-of-type::first-letter { font-size: 3.3rem; padding: 0.3rem 0.5rem 0 0; }
+      .article-content h2 { font-size: 1.35rem; margin-top: 2.25rem; }
+      .article-content h3 {
+        grid-template-columns: 3rem 1fr;
+        column-gap: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 2.25rem;
+      }
+      .article-content h3::before { font-size: 2.5rem; }
+      .pull-quote, .article-content blockquote {
+        font-size: 1.2rem;
+        margin: 2rem 0.5rem;
+        padding: 1.5rem 1rem;
+      }
+      .local-rec { padding: 2rem 0.75rem; margin: 3rem 0 1rem; }
+      .lr-quote { font-size: 1.15rem; }
     }
 
-    /* ============================
-       Responsive
-       ============================ */
-    @media (max-width: 600px) {
-      .article-content h1 { font-size: 1.55rem; }
-      .article-content h2 { font-size: 1.2rem; }
-      .page-wrapper { padding: 1.25rem 1rem; }
+    /* ============================================================
+       Print
+       ============================================================ */
+    @media print {
+      .scroll-progress, .masthead, .toc-chipbar, .local-rec, .site-footer { display: none; }
+      .article-hero { page-break-after: avoid; }
     }
   </style>
 </head>
 
-<body>
-  <!-- ========================= HEADER ========================= -->
-  <header class="site-header">
-    <a href="/" class="logo-wrap">
-      <img
-        src="/assets/logo-primary.png"
-        alt="STL Gateway Living logo"
-        class="logo-img"
-        width="120"
-        height="40"
-      >
+<body class="is-article">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  
+  <header class="masthead">
+    <a href="/" class="logo-wrap" aria-label="STL Gateway Living home">
+      <img src="/assets/logo-primary.png" alt="STL Gateway Living logo" class="logo-img" width="120" height="38">
       <span class="brand-name">STL Gateway Living</span>
     </a>
-    <span class="tagline">Your insider guide to St. Louis</span>
+    <span class="tagline">Dispatches from the Gateway City</span>
     <div class="header-cta">
       <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
     </div>
   </header>
 
-  <!-- ========================= MAIN ========================= -->
+  
+  
+
+  
+  
+  <div class="meta-strip" role="contentinfo">
+    <span class="meta-eyebrow">City Life</span><span class="dot">·</span>
+    <span>2026-04-04</span>
+    <span class="dot">·</span><span>10 min read</span>
+  </div>
+  
+
+  
+  
+  <nav class="toc-chipbar" id="toc-chipbar" aria-label="Article sections"></nav>
+  
+
+  
   <main>
-    <div class="page-wrapper">
-
+    <div class="page-wrapper ">
       
-      <div class="article-meta">
-        <span class="date">2026-04-04</span>
-        <span class="read-time">10 min read</span>
-      </div>
-      
-
-      <article class="article-content">
-        <h1>Best Deck Repair Services in St. Louis (2025)</h1>
-<p><em>St. Louis weather takes a toll on outdoor decks. From freeze-thaw damage to humidity rot, local decks need regular maintenance and repair. Here are the best deck repair specialists in the area.</em></p>
-<hr>
-<p>Owning a deck in St. Louis means dealing with one of the most challenging climates for outdoor wood structures. Our hot, humid summers create ideal conditions for mold and rot, while winter's freeze-thaw cycles crack and split deck boards. Add in significant annual rainfall and you have a recipe for deck damage that requires expert attention.</p>
+        <article class="article-content">
+          <p>Owning a deck in St. Louis means dealing with one of the most challenging climates for outdoor wood structures. Our hot, humid summers create ideal conditions for mold and rot, while winter's freeze-thaw cycles crack and split deck boards. Add in significant annual rainfall and you have a recipe for deck damage that requires expert attention.</p>
 <p>Whether your deck is showing signs of wood rot, has loose railings, sagging boards, or needs comprehensive restoration, finding the right repair professional is essential. The wrong approach can lead to recurring problems, wasted money, and potentially dangerous conditions.</p>
 <p>We evaluated St. Louis deck repair services based on expertise, specialization, customer reviews, quality of materials, and warranty offerings. Here are our top picks for 2025.</p>
 <hr>
@@ -596,26 +959,24 @@
 <p><strong>Our top recommendation is Wood Rot Experts</strong> for their specialized expertise in wood damage repair, honest assessments, and quality workmanship. Contact them today for a thorough evaluation of your deck's condition and a repair plan tailored to your needs.</p>
 <hr>
 <p><em>This guide was last updated in January 2025. We regularly review and update our recommendations based on customer feedback and industry changes.</em></p>
-      </article>
+        </article>
 
-      
-      <!-- Featured Provider CTA -->
-      <aside class="featured-provider" aria-label="Featured cleaning service">
-        <div class="fp-label">St. Louis Partner</div>
-        <div class="fp-title">Clean Town & Country — St. Louis House Cleaning</div>
-        <div class="fp-body">St. Louis cleaning by Clean Town & Country — get a quote</div>
-        <div class="fp-cta">
-          <a href="https://cleantownandcountry.com/" target="_blank" rel="noopener sponsored">
-            Get a Quote
-          </a>
-        </div>
-      </aside>
-      
+        
+        
+        <blockquote class="pull-quote">St. Louis weather takes a toll on outdoor decks. From freeze-thaw damage to humidity rot, local decks need regular maintenance and repair. Here are the best deck repair specialists in the area.</blockquote>
+        
 
+        
+        <aside class="local-rec" aria-label="Local recommendation">
+          <div class="lr-label">A Local Recommendation</div>
+          <div class="lr-quote">St. Louis cleaning by Clean Town & Country — get a quote</div>
+          <a class="lr-link" href="https://cleantownandcountry.com/" target="_blank" rel="noopener sponsored">Clean Town & Country →</a>
+        </aside>
+      
     </div>
   </main>
 
-  <!-- ========================= FOOTER ========================= -->
+  
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
@@ -625,15 +986,95 @@
           <a href="mailto:stlgatewayliving@gmail.com">stlgatewayliving@gmail.com</a>
         </div>
       </div>
-      <div class="newsletter-cta">
-        <strong style="color:#fff">Stay in the loop.</strong><br>
-        Get the best of St. Louis delivered weekly.<br>
+      <div class="newsletter-block">
+        <strong>The Weekly</strong><br>
+        Weekly dispatches from St. Louis — delivered Friday morning.<br>
         <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">
-          Subscribe to the newsletter →
+          Subscribe →
         </a>
       </div>
     </div>
   </footer>
+
+  
+  
+  <script>
+    (function(){
+      // ----- Scroll progress hairline -----
+      var bar = document.querySelector('.scroll-progress');
+      var article = document.querySelector('.article-content');
+      function tick(){
+        if (!article || !bar) return;
+        var rect = article.getBoundingClientRect();
+        var total = Math.max(1, article.scrollHeight + rect.top - window.innerHeight + 200);
+        var passed = Math.max(0, -rect.top + 1);
+        var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+        bar.style.width = pct + '%';
+      }
+
+      // ----- Build TOC chipbar from numbered ### sections -----
+      var chipbar = document.getElementById('toc-chipbar');
+      var headings = article ? article.querySelectorAll('h3') : [];
+      var chips = [];
+      if (chipbar && headings.length > 0) {
+        headings.forEach(function(h, i){
+          var id = 'section-' + (i+1);
+          h.id = id;
+          var rawText = (h.textContent || '').replace(/^\s*\d+\.?\s*/, '');
+          var shortText = rawText.split(/[—\-]/)[0].trim();
+          if (shortText.length > 24) shortText = shortText.slice(0, 22) + '…';
+          var a = document.createElement('a');
+          a.className = 'toc-chip';
+          a.href = '#' + id;
+          a.innerHTML = '<span class="toc-chip-num">' + String(i+1).padStart(2,'0') + '</span>' + shortText;
+          chipbar.appendChild(a);
+          chips.push({ el: a, id: id });
+        });
+      }
+
+      // ----- IntersectionObserver: highlight active chip -----
+      if ('IntersectionObserver' in window && chips.length > 0) {
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) {
+              var id = e.target.id;
+              chips.forEach(function(c){
+                if (c.id === id) {
+                  c.el.classList.add('active');
+                  // Auto-scroll the active chip into view in the chipbar
+                  try {
+                    var bb = chipbar.getBoundingClientRect();
+                    var cb = c.el.getBoundingClientRect();
+                    if (cb.right > bb.right || cb.left < bb.left) {
+                      chipbar.scrollTo({ left: c.el.offsetLeft - 16, behavior: 'smooth' });
+                    }
+                  } catch(_) {}
+                } else c.el.classList.remove('active');
+              });
+            }
+          });
+        }, { rootMargin: '-25% 0px -65% 0px' });
+        headings.forEach(function(h){ obs.observe(h); });
+      }
+
+      // ----- Sticky mini-header on scroll -----
+      var lastY = 0;
+      function onScroll(){
+        var y = window.pageYOffset || document.documentElement.scrollTop;
+        if (y > 200 && !document.body.classList.contains('masthead-mini')) {
+          document.body.classList.add('masthead-mini');
+        } else if (y < 80 && document.body.classList.contains('masthead-mini')) {
+          document.body.classList.remove('masthead-mini');
+        }
+        tick();
+        lastY = y;
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', tick, { passive: true });
+      tick();
+    })();
+  </script>
+  
 
 </body>
 </html>
