@@ -143,6 +143,19 @@
       letter-spacing: 0.04em; text-transform: uppercase;
     }
     .masthead .header-cta a:hover { background: var(--color-secondary-700); }
+    .masthead .nav-search {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: color 0.15s;
+      display: none;
+    }
+    @media (min-width: 540px) { .masthead .nav-search { display: inline; } }
+    .masthead .nav-search:hover { color: #fff; }
 
     /* ============================================================
        Article hero — full bleed
@@ -724,8 +737,11 @@
       <span class="brand-name">STL Gateway Living</span>
     </a>
     <span class="tagline">Dispatches from the Gateway City</span>
-    <div class="header-cta">
-      <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <a href="/search.html" class="nav-search" aria-label="Search">Search</a>
+      <div class="header-cta">
+        <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
+      </div>
     </div>
   </header>
 
