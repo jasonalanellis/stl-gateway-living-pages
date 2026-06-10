@@ -8,7 +8,7 @@
   <link rel="alternate" type="application/rss+xml" title="STL Gateway Living RSS" href="https://stlgatewayliving.com/feed.xml">
   <link rel="alternate" type="application/json" title="STL Gateway Living JSON Feed" href="https://stlgatewayliving.com/feed.json">
   <title>STL Gateway Living — Local Guide | STL Gateway Living</title>
-  <meta name="description" content="The best local guide for St. Louis.">
+  <meta name="description" content="STL Gateway Living covers neighborhoods, dining, arts, and local life across St. Louis — Soulard to Clayton to the Central West End.">
   <link rel="canonical" href="https://stlgatewayliving.com/">
 
   
@@ -705,6 +705,27 @@
       "@id": "https://stlgatewayliving.com/#org",
       "name": "STL Gateway Living",
       "url": "https://stlgatewayliving.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://stlgatewayliving.com/assets/logo-primary.png",
+        "width": 600,
+        "height": 200
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/stlgatewayliving/",
+        "https://twitter.com/stgatewayliving",
+        "https://www.facebook.com/STLGatewayLiving"
+      ],
+      "knowsAbout": [
+        "St. Louis neighborhoods",
+        "St. Louis dining",
+        "Soulard",
+        "Clayton Missouri",
+        "Central West End",
+        "St. Louis arts and culture",
+        "St. Louis local life",
+        "St. Louis events"
+      ],
       "founder": {
         "@id": "https://stlgatewayliving.com/authors/jason-ellis.html#person"
       },
@@ -721,11 +742,20 @@
       "publisher": {
         "@id": "https://stlgatewayliving.com/#org"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://stlgatewayliving.com/search.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
 }
 </script>
+<!-- TODO (operator): Add Wikidata Q-ID to sameAs array above once created (plan.md §2 O7) -->
 </head>
 
 <body class="is-index">
