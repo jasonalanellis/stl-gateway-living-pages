@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="alternate" type="application/rss+xml" title="STL Gateway Living RSS" href="https://stlgatewayliving.com/feed.xml">
+  <link rel="alternate" type="application/json" title="STL Gateway Living JSON Feed" href="https://stlgatewayliving.com/feed.json">
+  <title>Renting and Moving to St. Louis: A Practical Guide (2026) | STL Gateway Living</title>
+  <meta name="description" content="Moving to St. Louis? This practical guide covers neighborhoods, renting vs. buying, what to expect from the local market, and settling into the city.">
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-06-10T00:00:00Z">
+  <meta property="article:modified_time" content="2026-06-10T00:00:00Z">
+  <meta property="article:author" content="https://stlgatewayliving.com/authors/jason-ellis.html">
+
+  <meta property="og:title" content="Renting and Moving to St. Louis: A Practical Guide (2026)">
+  <meta property="og:description" content="Moving to St. Louis? This practical guide covers neighborhoods, renting vs. buying, what to expect from the local market, and settling into the city.">
+  <meta property="og:site_name" content="STL Gateway Living">
+  <meta property="og:url" content="https://stlgatewayliving.com/renting-and-moving-to-st-louis.html">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Renting and Moving to St. Louis: A Practical Guide (2026)">
+  <meta name="twitter:description" content="Moving to St. Louis? This practical guide covers neighborhoods, renting vs. buying, what to expect from the local market, and settling into the city.">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    .section-image { margin: 1.5rem -1.25rem 2rem; }
+    .section-image img { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+    @media (min-width: 720px) { .section-image { margin: 2rem 0 2.5rem; border-radius: var(--radius-card, 4px); overflow: hidden; } }
+    :root {
+      /* STLGL — Gateway Blue, Arch Gold, Cardinals Red */
+      --color-primary:    #1E3A5F;
+      --color-primary-700: #122745;
+      --color-primary-50:  #EAF0F7;
+      --color-secondary:  #C0A062;
+      --color-secondary-700: #9A7F47;
+      --color-accent:     #E85D04;
+      --color-accent-50:  #FCE8DA;
+      --color-paper:      #F8F5EE;
+      --color-ink:        #0B1A2D;
+      --color-surface:    #FFFFFF;
+      --color-text:       #1A1A1A;
+      --color-text-muted: #5C5A52;
+      --color-border:     #DDD7C5;
+      --color-editor-pick-bg: #FAF3E0;
+      --font-heading:     'Montserrat', sans-serif;
+      --font-body:        'Open Sans', sans-serif;
+      --font-accent:      'Playfair Display', Georgia, serif;
+      --radius-card:      4px;
+      --radius-pill:      4px;
+      --max-width-article:  720px;
+      --max-width-sidebar:  280px;
+      --max-width-home:     1180px;
+      --max-width-hero:     1600px;
+      --eyebrow-color:     var(--color-secondary);
+      --eyebrow-letter-spacing: 0.22em;
+      --hero-scrim:       linear-gradient(180deg, transparent 35%, rgba(11,26,45,0.72) 78%, rgba(11,26,45,0.94) 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--color-paper);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--color-primary); }
+    a:hover { color: var(--color-primary-700); }
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: var(--color-secondary); z-index: 9999; transition: width 0.1s linear;
+    }
+    .masthead {
+      position: sticky; top: 0; z-index: 900;
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.8rem 1.5rem;
+      background: rgba(248,245,238,0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--color-ink); }
+    .logo-img { height: 32px; width: auto; }
+    .brand-name { font-family: var(--font-accent); font-weight: 700; font-size: 1.05rem; color: var(--color-ink); }
+    .tagline { font-size: 0.78rem; color: var(--color-text-muted); margin-left: auto; display: none; }
+    @media (min-width: 640px) { .tagline { display: block; } }
+    .header-cta { margin-left: auto; }
+    .tagline ~ .header-cta { margin-left: 0; }
+    .header-cta a {
+      background: var(--color-secondary); color: #fff; text-decoration: none;
+      font-family: var(--font-heading); font-weight: 600; font-size: 0.78rem;
+      padding: 0.4rem 0.85rem; border-radius: var(--radius-pill); letter-spacing: 0.04em;
+    }
+    .meta-strip {
+      max-width: var(--max-width-article);
+      margin: 1.5rem auto 0;
+      padding: 0 1.25rem;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: var(--eyebrow-letter-spacing);
+      color: var(--color-text-muted);
+      display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+    }
+    .meta-strip .meta-eyebrow { color: var(--eyebrow-color); }
+    .meta-strip .dot { color: var(--color-border); }
+    .toc-chipbar {
+      position: sticky; top: 57px; z-index: 800;
+      display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.55rem 1.25rem;
+      background: rgba(248,245,238,0.96); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--color-border);
+      scrollbar-width: none;
+    }
+    .toc-chipbar::-webkit-scrollbar { display: none; }
+    .toc-chip {
+      flex-shrink: 0; display: inline-flex; align-items: center; gap: 0.35rem;
+      font-family: var(--font-heading); font-size: 0.72rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--color-text-muted); text-decoration: none;
+      background: var(--color-primary-50); border-radius: var(--radius-pill);
+      padding: 0.3rem 0.75rem;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc-chip.active, .toc-chip:hover { background: var(--color-primary); color: #fff; }
+    .toc-chip-num { font-size: 0.65rem; opacity: 0.6; }
+    .page-wrapper {
+      max-width: var(--max-width-article);
+      margin: 2rem auto 4rem;
+      padding: 0 1.25rem;
+    }
+    .article-content h1 {
+      font-family: var(--font-accent); font-size: 2.4rem; font-weight: 700;
+      line-height: 1.15; color: var(--color-ink); margin-bottom: 1rem;
+    }
+    .article-intro {
+      font-size: 1.125rem; line-height: 1.75;
+      color: var(--color-text); margin-bottom: 1.5rem;
+    }
+    .article-content > p:first-of-type::first-letter {
+      font-family: var(--font-accent); font-size: 3.8rem; font-weight: 700;
+      float: left; line-height: 0.82; padding: 0.3rem 0.55rem 0 0;
+      color: var(--color-primary);
+    }
+    .article-content h2 {
+      font-family: var(--font-accent); font-size: 1.65rem; font-weight: 700;
+      color: var(--color-ink); margin-top: 3rem; margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .article-content h3 {
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      column-gap: 1rem;
+      align-items: start;
+      font-family: var(--font-accent);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: 2.75rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.25;
+      counter-increment: h3-counter;
+    }
+    .article-content h3::before {
+      content: counter(h3-counter, decimal-leading-zero);
+      font-family: var(--font-accent);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color-primary-50);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .article-content { counter-reset: h3-counter; }
+    .article-content h3 > * { grid-column: 2; }
+    @media (max-width: 480px) {
+      .article-content h3 { padding-left: 0; }
+    }
+    .article-content p { margin-bottom: 1.1rem; }
+    .article-content hr {
+      border: none; border-top: 1px solid var(--color-border);
+      margin: 2rem 0;
+    }
+    .article-content ul, .article-content ol {
+      padding-left: 1.5rem; margin-bottom: 1.1rem;
+    }
+    .article-content li { margin-bottom: 0.35rem; }
+    .article-content strong { font-weight: 600; }
+    .answer-capsule {
+      background: var(--color-primary-50);
+      border-left: 4px solid var(--color-primary);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      padding: 1.1rem 1.3rem;
+      margin: 1.75rem 0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .answer-capsule .capsule-q {
+      font-family: var(--font-heading); font-weight: 700; font-size: 0.78rem;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-primary);
+      margin-bottom: 0.4rem;
+    }
+    .pull-quote, .article-content blockquote {
+      font-family: var(--font-accent); font-size: 1.4rem; font-style: italic;
+      color: var(--color-ink); line-height: 1.4;
+      border-left: 4px solid var(--color-secondary);
+      padding: 1.2rem 1.5rem; margin: 2.5rem 0;
+      background: var(--color-editor-pick-bg);
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+    }
+    .local-rec {
+      background: var(--color-primary); color: #fff;
+      padding: 2.5rem 2rem; margin: 4rem 0 2rem;
+      border-radius: var(--radius-card);
+      text-align: center;
+    }
+    .lr-label {
+      font-family: var(--font-heading); font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.7); margin-bottom: 0.5rem;
+    }
+    .lr-quote {
+      font-family: var(--font-accent); font-size: 1.35rem; font-weight: 700;
+      color: #fff; margin-bottom: 1.25rem; line-height: 1.3;
+    }
+    .lr-link {
+      display: inline-block; background: var(--color-secondary); color: #fff;
+      text-decoration: none; font-family: var(--font-heading); font-weight: 700;
+      font-size: 0.85rem; padding: 0.65rem 1.4rem; border-radius: var(--radius-pill);
+      letter-spacing: 0.04em; transition: background 0.15s;
+    }
+    .lr-link:hover { background: var(--color-secondary-700); }
+    .site-footer {
+      background: var(--color-primary);
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 1.5rem 2rem;
+      margin-top: 5rem;
+      font-size: 0.88rem;
+    }
+    .site-footer .footer-inner {
+      max-width: var(--max-width-home);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    @media (min-width: 720px) {
+      .site-footer .footer-inner { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    }
+    .site-footer .footer-brand {
+      font-family: var(--font-accent); font-weight: 700; font-size: 1.15rem;
+      color: #FFFFFF; margin-bottom: 0.5rem;
+    }
+    .site-footer a { color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.4); }
+    .site-footer a:hover { border-bottom-color: var(--color-secondary); }
+    .site-footer .newsletter-block { font-size: 0.92rem; }
+    .site-footer .newsletter-block strong { color: #fff; font-family: var(--font-heading); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+    @media (max-width: 600px) {
+      html { font-size: 17px; }
+      body { line-height: 1.65; }
+      .page-wrapper { padding: 1.25rem 1rem 2rem; max-width: 100%; }
+      .masthead { padding: 0.65rem 1rem; }
+      .brand-name { font-size: 1rem; }
+      .toc-chipbar { top: 56px; padding: 0.4rem 0.75rem; }
+      .article-content > p:first-of-type::first-letter { font-size: 3.3rem; padding: 0.3rem 0.5rem 0 0; }
+      .article-content h2 { font-size: 1.35rem; margin-top: 2.25rem; }
+      .article-content h3 {
+        grid-template-columns: 3rem 1fr;
+        column-gap: 0.9rem;
+        font-size: 1.2rem;
+        margin-top: 2.25rem;
+      }
+      .article-content h3::before { font-size: 2.5rem; }
+    }
+    @media print {
+      .scroll-progress, .masthead, .toc-chipbar, .local-rec, .site-footer { display: none; }
+    }
+  </style>
+<!-- BEGIN seo_inject -->
+<link rel="canonical" href="https://stlgatewayliving.com/renting-and-moving-to-st-louis.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NewsMediaOrganization",
+      "@id": "https://stlgatewayliving.com/#org",
+      "name": "STL Gateway Living",
+      "url": "https://stlgatewayliving.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://stlgatewayliving.com/assets/logo-primary.png",
+        "width": 600,
+        "height": 200
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/stlgatewayliving/",
+        "https://twitter.com/stgatewayliving",
+        "https://www.facebook.com/STLGatewayLiving"
+      ],
+      "founder": {
+        "@id": "https://stlgatewayliving.com/authors/jason-ellis.html#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://stlgatewayliving.com/authors/jason-ellis.html#person",
+      "name": "Jason Ellis",
+      "jobTitle": "Founder & Editor-in-Chief",
+      "url": "https://stlgatewayliving.com/authors/jason-ellis.html",
+      "description": "Jason Ellis edits STL Gateway Living, a local guide to the people, places, and weekend rhythms of St. Louis. The guide is built by writers and operators who live in the city.",
+      "image": "https://stlgatewayliving.com/authors/jason-ellis.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/jasonalanellis/",
+        "https://twitter.com/stgatewayliving"
+      ],
+      "worksFor": {
+        "@id": "https://stlgatewayliving.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://stlgatewayliving.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Renting and Moving to St. Louis: A Practical Guide (2026)",
+          "item": "https://stlgatewayliving.com/renting-and-moving-to-st-louis.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://stlgatewayliving.com/renting-and-moving-to-st-louis.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://stlgatewayliving.com/renting-and-moving-to-st-louis.html"
+      },
+      "headline": "Renting and Moving to St. Louis: A Practical Guide (2026)",
+      "description": "Moving to St. Louis? This practical guide covers neighborhoods, renting vs. buying, what to expect from the local market, and settling into the city.",
+      "datePublished": "2026-06-10T00:00:00Z",
+      "dateModified": "2026-06-10T00:00:00Z",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://stlgatewayliving.com/authors/jason-ellis.html#person"
+      },
+      "publisher": {
+        "@id": "https://stlgatewayliving.com/#org"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".article-intro"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best neighborhood to rent in St. Louis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The answer depends heavily on your priorities. Clayton offers the best combination of walkability, dining, and school district quality for renters who want a suburban feel with urban amenities. Soulard is the top choice for renters who want to be near nightlife and the historic district. Central West End suits those who want walkable access to Forest Park, independent restaurants, and a diverse, active street life. Lafayette Square is a strong value option with strong architectural character."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it better to rent or buy in St. Louis right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "St. Louis has historically low home prices relative to national benchmarks — the St. Louis Fed's regional housing data consistently shows the metro below the national median. For newcomers to the city, renting for at least 12 months before buying is generally recommended: neighborhood character varies significantly block by block, and local knowledge matters for both value and livability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do when I move into a new rental in St. Louis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Before settling in, document the unit's condition with dated photos (protects your deposit), change the locks or request new ones, and arrange a move-in deep clean if the previous tenant's cleaning doesn't meet your standard. St. Louis rental stock includes many older buildings with specific maintenance considerations — cast-iron radiators, old plumbing, and finished basements are common in historic neighborhoods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is St. Louis' City vs. County distinction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "St. Louis City and St. Louis County are separate governmental entities — St. Louis City is an independent city that is not part of any county. This distinction affects taxes, school districts, and municipal services. Most of the popular rental neighborhoods for newcomers (Clayton, Kirkwood, Webster Groves, Maplewood) are in St. Louis County. Soulard, Lafayette Square, Tower Grove, and Forest Park are in St. Louis City."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- END seo_inject -->
+<!-- BEGIN geo_meta -->
+  <meta name="geo.region" content="US-MO">
+  <meta name="geo.placename" content="St. Louis">
+  <meta name="geo.position" content="38.6270;-90.1994">
+  <meta name="ICBM" content="38.6270, -90.1994">
+<!-- END geo_meta -->
+</head>
+
+<body class="is-article">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <a href="/" class="logo-wrap" aria-label="STL Gateway Living home">
+      <img src="/assets/logo-primary.png" alt="STL Gateway Living logo" class="logo-img" width="120" height="38" loading="lazy" decoding="async">
+      <span class="brand-name">STL Gateway Living</span>
+    </a>
+    <span class="tagline">Dispatches from the Gateway City</span>
+    <div class="header-cta">
+      <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">Subscribe</a>
+    </div>
+  </header>
+
+  <div class="meta-strip" role="contentinfo">
+    <span class="meta-eyebrow">City Life</span><span class="dot">·</span>
+    <span>2026-06-10</span>
+    <span class="dot">·</span><span>10 min read</span>
+  </div>
+
+  <nav class="toc-chipbar" id="toc-chipbar" aria-label="Article sections"></nav>
+
+  <main>
+    <div class="page-wrapper">
+      <article class="article-content">
+        <h1>Renting and Moving to St. Louis: A Practical Guide (2026)</h1>
+
+        <p class="article-intro">St. Louis is genuinely one of the more interesting cities in the country to relocate to right now — historically low housing costs, a food scene that has been quietly excellent for years, and a set of neighborhoods with real character. It's also a city that rewards local knowledge. The City/County split, the way the school district question affects where people land, and the block-by-block variation in neighborhood quality are not things you pick up from a weekend visit.</p>
+
+        <div class="answer-capsule">
+          <div class="capsule-q">Quick answer: what should I know before renting in St. Louis?</div>
+          St. Louis City and St. Louis County are separate governments — where you rent affects your tax rate, school district, and municipal services. The most popular rental neighborhoods for newcomers are Clayton, Soulard, Central West End, Lafayette Square, and Tower Grove South. Rental stock skews older (pre-WWII in many neighborhoods), which means charm and architectural detail, but also attention to heating systems, older plumbing, and finished basements. Rent a place before buying — the city rewards local knowledge.
+        </div>
+
+        <p>What follows is a practical orientation for people seriously considering a move to St. Louis — renters and buyers thinking about where to land, what the neighborhoods are actually like, and what to handle on arrival.</p>
+
+        <hr>
+        <h2>The City/County Split — What It Actually Means</h2>
+
+        <h3>St. Louis City vs. St. Louis County</h3>
+        <p>The most important thing newcomers misunderstand: St. Louis City and St. Louis County are separate governmental entities. St. Louis City separated from St. Louis County in 1876 and has been an independent city — not part of any county — ever since. Most of the nation's major cities are within a county; St. Louis City is not.</p>
+
+        <p>What this means in practice:</p>
+        <ul>
+          <li><strong>Property taxes:</strong> St. Louis City has its own tax rate, separate from county municipalities. Both are on the lower end of the national range, but they differ.</li>
+          <li><strong>School districts:</strong> St. Louis City has its own school district, separate from any county municipality. This is a significant factor for families with children.</li>
+          <li><strong>Municipal services:</strong> City residents call St. Louis City for services; county residents deal with their specific municipality (Clayton, Kirkwood, Webster Groves, etc.).</li>
+        </ul>
+
+        <p>The <a href="https://www.stlouis-mo.gov" target="_blank" rel="noopener external">City of St. Louis official website</a> handles permits, utilities, and city services for in-city residents. <a href="https://stlouisco.com" target="_blank" rel="noopener external">St. Louis County</a> handles everything for the surrounding municipalities.</p>
+
+        <h3>Missouri Tenant Rights You Should Know</h3>
+        <p>Missouri's landlord-tenant law is contained primarily in <a href="https://revisor.mo.gov/main/OneSection.aspx?section=535.300" target="_blank" rel="noopener external">Chapter 535 of the Missouri Revised Statutes</a>. Key provisions for renters:</p>
+        <ul>
+          <li>Security deposits are capped at two months' rent.</li>
+          <li>Landlords must return deposits within 30 days of move-out, with an itemized list of any deductions.</li>
+          <li>Missouri is not a rent-control state — there are no local rent stabilization ordinances in St. Louis metro.</li>
+          <li>Lease break fees are enforceable as written; review yours before signing.</li>
+        </ul>
+
+        <hr>
+        <h2>Neighborhood-by-Neighborhood Rental Guide</h2>
+
+        <h3>Clayton — Suburban Quality, Urban Access</h3>
+        <p>Clayton is the seat of St. Louis County and consistently ranks as one of the most livable places in the metro. The downtown area is walkable, anchored by Shaw Park and ringed by serious restaurants and independent shops. The school district (Clayton School District) is among the highest-rated in the state per <a href="https://dese.mo.gov" target="_blank" rel="noopener external">Missouri DESE data</a>.</p>
+
+        <p>Rental options run from modern apartment buildings near the Clayton Metro station to single-family homes in the residential streets to the north. It is more expensive than most of the metro, but the amenity-to-cost ratio is strong by national comparison. Families and professionals relocating for Washington University, BJC, or county-based employers tend to land here first.</p>
+
+        <h3>Soulard — History, Energy, Community</h3>
+        <p>Soulard is the oldest neighborhood in St. Louis, anchored by the <a href="https://www.soulardmarket.com" target="_blank" rel="noopener external">Soulard Farmers Market</a> (operating continuously since 1779) and a dense grid of Federal-style rowhouses that have been steadily renovating since the 1970s. It's the most European-feeling neighborhood in the city — close-built, walkable, with a genuine bar and restaurant scene that functions year-round, not just weekends.</p>
+
+        <p>Rental stock here is mostly rowhouses and flats in older buildings. Heating systems are often old-school cast-iron radiators (excellent heat, different maintenance). Soulard is in St. Louis City, so city services apply. The Mardi Gras festival (second-largest in the country after New Orleans) brings significant crowds — something to account for in your first February here.</p>
+
+        <h3>Central West End — Forest Park Proximity, Walkable Dining</h3>
+        <p>The Central West End sits on the edge of <a href="https://www.forestparkforever.org" target="_blank" rel="noopener external">Forest Park</a> — 1,300 acres that host the St. Louis Zoo, Art Museum, History Museum, and Muny Opera, all free. The neighborhood's main commercial strip (Euclid Avenue) is one of the best walkable dining streets in the city.</p>
+
+        <p>CWE attracts a mixed demographic: medical professionals (Barnes-Jewish is adjacent), Washington University students and faculty, and long-term residents. Apartment buildings and converted historic flats dominate the rental market here.</p>
+
+        <h3>Lafayette Square — Value, Architecture, Character</h3>
+        <p>Lafayette Square is one of the most architecturally significant neighborhoods in the city — Victorian mansions and Second Empire townhouses around a small park. It's undergone substantial renovation over the past 30 years and offers some of the best value per square foot among quality neighborhoods in St. Louis City.</p>
+
+        <p>Rental options are mostly renovated units within historic buildings. The neighborhood is quiet by St. Louis standards, with walkable access to Tower Grove South's restaurant row and South Grand's international dining corridor.</p>
+
+        <h3>Tower Grove South and South Grand</h3>
+        <p>The most consistently underpriced neighborhood for renters who want character and access to dining. South Grand is anchored by one of the best international food corridors in the Midwest — Vietnamese, Ethiopian, Bosnian, and Mexican restaurants concentrated within a few blocks. Tower Grove Park is a 289-acre Victorian park with sheltered pavilions and concert spaces.</p>
+
+        <hr>
+        <h2>Setting Up: What to Handle on Arrival</h2>
+
+        <h3>Move-In Cleaning and Unit Documentation</h3>
+        <p>Two things that experienced renters do before unpacking: photograph every room thoroughly (walls, floors, fixtures, appliances, closets) with dated images, and arrange a professional move-in clean if the previous tenant's cleaning standard doesn't hold up. St. Louis rental stock is older on average than most metros — older buildings develop specific issues (basement humidity, radiator dust, older kitchen ventilation) that a thorough initial clean addresses before you're living in the space.</p>
+
+        <p>For a move-in deep clean in the St. Louis metro, <a href="https://cleantownandcountry.com/house-cleaning-st-louis" target="_blank" rel="noopener">Clean Town &amp; Country</a> is the most recommended local service — family-owned, fully insured, and experienced with St. Louis's older housing stock. Their 275°F steam protocol works well on the grout, tile, and appliance buildup that accumulates in properties between tenancies.</p>
+
+        <h3>Utilities and Services</h3>
+        <p>St. Louis area utilities: Ameren Missouri handles electricity and gas for most of the metro. Water and sewer is handled by Missouri American Water (county) or the City of St. Louis Water Division (in-city). Trash collection schedules differ between city and county — check with your municipality.</p>
+
+        <p>Internet: AT&T Fiber and Spectrum are the dominant providers across most of the metro. Fiber availability varies by neighborhood — check address-level availability before committing to a unit if fiber is important to you.</p>
+
+        <h3>Getting Around St. Louis</h3>
+        <p>St. Louis is primarily a car city. The Metro light rail (MetroLink) connects Lambert Airport to Scott Air Force Base through downtown, Clayton, and the Central West End, but most of the metro requires a car for daily life. Bikeable neighborhoods (Soulard, CWE, Tower Grove) are the exception, not the rule. If you're relocating without a car, factor neighborhood walkability and Metrolink access heavily into your rental decision.</p>
+
+        <hr>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What is the best neighborhood to rent in St. Louis?</h3>
+        <p>The answer depends on your priorities. Clayton offers the best combination of walkability, dining, and school quality for renters who want a suburban feel with urban amenities. Soulard is the top choice for renters who want to be near nightlife and the historic district. Central West End suits those who want walkable access to Forest Park and independent restaurants. Lafayette Square is a strong value option with strong architectural character.</p>
+
+        <h3>Is it better to rent or buy in St. Louis right now?</h3>
+        <p>St. Louis has historically low home prices relative to national benchmarks — the <a href="https://fred.stlouisfed.org/series/ATNHPIUS41180A" target="_blank" rel="noopener external">Federal Reserve Bank of St. Louis housing price data</a> consistently shows the metro below the national median. For newcomers to the city, renting for at least 12 months before buying is generally recommended: neighborhood character varies significantly block by block, and local knowledge matters for both value and livability.</p>
+
+        <h3>What should I do when I move into a new rental in St. Louis?</h3>
+        <p>Before settling in: document the unit's condition with dated photos, change the locks or request new ones, and arrange a move-in deep clean if the previous tenant's cleaning doesn't meet your standard. St. Louis rental stock includes many older buildings with specific maintenance considerations — cast-iron radiators, old plumbing, and finished basements are common in historic neighborhoods.</p>
+
+        <h3>What is the City vs. County distinction in St. Louis?</h3>
+        <p>St. Louis City is an independent city not part of any county, separated from St. Louis County in 1876. This affects your tax rate, school district, and which government handles your services. Most popular rental neighborhoods for newcomers — Clayton, Kirkwood, Webster Groves, Maplewood — are in St. Louis County. Soulard, Lafayette Square, Tower Grove, and Forest Park are in St. Louis City.</p>
+
+        <hr>
+        <p><em>This guide was last updated in June 2026. Rental market conditions and municipal policies change — confirm current details with local sources before signing a lease.</em></p>
+      </article>
+
+      <blockquote class="pull-quote">St. Louis rewards residents who take the time to understand it — the City/County split, the neighborhood variation, and the remarkable value hiding in plain sight across the metro.</blockquote>
+<!-- BEGIN internal_links -->
+<style>
+  .related-section { max-width: 1080px; margin: 4rem auto 2rem; padding: 0 1.25rem; }
+  .related-eyebrow { font-family: Montserrat, sans-serif; font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.18em; color: #777; margin-bottom: 0.5rem; }
+  .related-heading { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.85rem; line-height: 1.15; margin-bottom: 1.75rem; }
+  .related-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+  @media (min-width: 720px) { .related-grid { grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; } }
+  .related-card { display: block; background: #fff; border-radius: var(--radius-card, 4px); overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(0,0,0,0.06); transition: transform 0.18s, box-shadow 0.18s; }
+  .related-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+  .related-card-img { width: 100%; aspect-ratio: 16/10; background: #1B4332; overflow: hidden; }
+  .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
+  .related-card-img-empty { background: linear-gradient(135deg, #1E3A5F 0%, #C0A062 100%); }
+  .related-card-body { padding: 1.1rem 1.2rem 1.35rem; }
+  .related-card-title { font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.1rem; line-height: 1.25; margin-bottom: 0.5rem; }
+  .related-card-snippet { font-family: "Open Sans", sans-serif; font-size: 0.88rem; line-height: 1.5; color: #666; }
+</style>
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="related-eyebrow">Related Reading</div>
+  <h2 class="related-heading" id="related-heading">More from the guide</h2>
+  <div class="related-grid">
+<a class="related-card" href="/best-house-cleaning-st-louis.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Best House Cleaning Services in St. Louis (2026)</h3><p class="related-card-snippet">St. Louis homes face unique cleaning challenges — from Missouri humidity summers to freeze-thaw winters. Here are the top professional cleaning services in the metro…</p></div></a>
+<a class="related-card" href="/things-to-see-and-do-st-louis.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Things to See and Do in St. Louis</h3><p class="related-card-snippet">Free world-class museums, the Gateway Arch, Soulard Market, Forest Park, and the best of what The Lou actually offers residents and visitors.</p></div></a>
+<a class="related-card" href="/best-move-out-cleaning-st-louis.html"><div class="related-card-img related-card-img-empty"></div><div class="related-card-body"><h3 class="related-card-title">Best Move-Out Cleaning Services in St. Louis</h3><p class="related-card-snippet">Moving out of a St. Louis rental? A professional clean is one of the strongest defenses against deposit deductions under Missouri §535.300.</p></div></a>
+  </div>
+</section>
+<!-- END internal_links -->
+
+        <aside class="local-rec" aria-label="Local recommendation">
+          <div class="lr-label">A Local Recommendation</div>
+          <div class="lr-quote">St. Louis cleaning by Clean Town &amp; Country — get a quote</div>
+          <a class="lr-link" href="https://cleantownandcountry.com/" target="_blank" rel="noopener sponsored">Clean Town &amp; Country →</a>
+        </aside>
+
+    </div>
+
+<section class="local-services-cta" style="max-width:var(--max-width-article,720px);margin:2.5rem auto;padding:1.5rem 1.75rem;border:1px solid var(--color-border,#ddd);border-left:4px solid var(--color-secondary,#888);border-radius:var(--radius-card,4px);background:var(--color-editor-pick-bg,#f7f7f7)">
+<p style="font-family:var(--font-heading,sans-serif);font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--color-secondary);margin:0 0 .4rem">Local services</p>
+<h2 style="font-family:var(--font-accent,Georgia,serif);font-size:1.4rem;margin:0 0 .5rem;color:var(--color-ink)">Clean Town &amp; Country &mdash; professional home cleaning in St. Louis</h2>
+<p style="margin:0 0 1rem;color:var(--color-text)">Steam-led home cleaning across St. Louis metro &mdash; family-owned, $2M insured, satisfaction guaranteed.</p>
+<a href="https://cleantownandcountry.com/booking-request" rel="noopener" style="display:inline-block;background:var(--color-secondary);color:#fff;text-decoration:none;font-family:var(--font-heading,sans-serif);font-weight:600;font-size:.85rem;padding:.6rem 1.2rem;border-radius:var(--radius-pill,4px)">Get a free quote &rarr;</a>
+</section>
+</main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">STL Gateway Living</div>
+        <div>© 2026 STL Gateway Living. All rights reserved.</div>
+        <div style="margin-top:0.5rem">
+          <a href="mailto:stlgatewayliving@gmail.com">stlgatewayliving@gmail.com</a>
+          &nbsp;&middot;&nbsp;
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="newsletter-block">
+        <strong>The Weekly</strong><br>
+        The best of St. Louis delivered every Friday morning.<br>
+        <a href="https://stlgatewayliving.com/subscribe" target="_blank" rel="noopener">
+          Subscribe →
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var bar = document.querySelector('.scroll-progress');
+      var article = document.querySelector('.article-content');
+      function tick(){
+        if (!article || !bar) return;
+        var rect = article.getBoundingClientRect();
+        var total = Math.max(1, article.scrollHeight + rect.top - window.innerHeight + 200);
+        var passed = Math.max(0, -rect.top + 1);
+        var pct = Math.max(0, Math.min(100, (passed / total) * 100));
+        bar.style.width = pct + '%';
+      }
+      var chipbar = document.getElementById('toc-chipbar');
+      var headings = article ? article.querySelectorAll('h3') : [];
+      var chips = [];
+      if (chipbar && headings.length > 0) {
+        headings.forEach(function(h, i){
+          var id = 'section-' + (i+1);
+          h.id = id;
+          var rawText = (h.textContent || '').replace(/^\s*\d+\.?\s*/, '');
+          var shortText = rawText.split(/[—\-]/)[0].trim();
+          if (shortText.length > 24) shortText = shortText.slice(0, 22) + '…';
+          var a = document.createElement('a');
+          a.className = 'toc-chip';
+          a.href = '#' + id;
+          a.innerHTML = '<span class="toc-chip-num">' + String(i+1).padStart(2,'0') + '</span>' + shortText;
+          chipbar.appendChild(a);
+          chips.push({ el: a, id: id });
+        });
+      }
+      if ('IntersectionObserver' in window && chips.length > 0) {
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting) {
+              var id = e.target.id;
+              chips.forEach(function(c){
+                if (c.id === id) {
+                  c.el.classList.add('active');
+                  try {
+                    var bb = chipbar.getBoundingClientRect();
+                    var cb = c.el.getBoundingClientRect();
+                    if (cb.right > bb.right || cb.left < bb.left) {
+                      chipbar.scrollTo({ left: c.el.offsetLeft - 16, behavior: 'smooth' });
+                    }
+                  } catch(_) {}
+                } else c.el.classList.remove('active');
+              });
+            }
+          });
+        }, { rootMargin: '-25% 0px -65% 0px' });
+        headings.forEach(function(h){ obs.observe(h); });
+      }
+      window.addEventListener('scroll', tick, { passive: true });
+      tick();
+    })();
+  </script>
+</body>
+</html>
