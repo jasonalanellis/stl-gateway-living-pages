@@ -540,12 +540,16 @@ h1, h2, h3, h4 {
 }
 .breadcrumb a { text-decoration: none; }
 
-main {
+/* Venue and neighbourhood pages put their content directly in <main>; article
+   and index pages wrap theirs in .page-wrapper, which already owns the
+   measure. Scoping this keeps the narrow column off the articles — an
+   unscoped `main` rule squeezed every article body to 64px wide. */
+main:not(:has(.page-wrapper)) {
   max-width: 44rem;
   margin-inline: auto;
   padding: 2.5rem var(--gutter) 4rem;
 }
-main > * + * { margin-top: 1.25rem; }
+main:not(:has(.page-wrapper)) > * + * { margin-top: 1.25rem; }
 
 .venue-eyebrow, .nb-eyebrow, .event-date {
   font-family: var(--font-utility);
