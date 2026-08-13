@@ -499,6 +499,196 @@ h1, h2, h3, h4 {
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { color: var(--accent); }
 
+/* ---------- venue + neighbourhood pages ----------
+   These are emitted by lifestyle_pseo_pages.py with their own class
+   vocabulary and (previously) their own hardcoded-hex stylesheet. They now
+   inherit the chassis so the third style generation is gone. Their masthead
+   is a two-child variant: <header class="masthead"><a class="brand">…<a
+   class="subscribe">. */
+
+.masthead:has(> a.brand) { grid-template-columns: 1fr auto; }
+.masthead a.brand {
+  grid-column: 1;
+  justify-self: start;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  text-decoration: none;
+}
+.masthead a.subscribe {
+  grid-column: 2;
+  justify-self: end;
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 3px;
+}
+
+.breadcrumb {
+  max-width: var(--page-max);
+  margin: 1.5rem auto 0;
+  padding-inline: var(--gutter);
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.breadcrumb a { text-decoration: none; }
+
+main {
+  max-width: 44rem;
+  margin-inline: auto;
+  padding: 2.5rem var(--gutter) 4rem;
+}
+main > * + * { margin-top: 1.25rem; }
+
+.venue-eyebrow, .nb-eyebrow, .event-date {
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1.venue-h1, h1.nb-h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-top: 0.85rem; }
+.venue-meta, .venue-addr, .venue-extra, .event-desc { color: var(--muted); font-size: 1rem; }
+.venue-addr strong {
+  font-family: var(--font-utility);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.venue-featured, .nb-intro {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-style: italic;
+  line-height: 1.35;
+  border-top: 3px double var(--rule-strong);
+  padding-top: 1.75rem;
+  margin-top: 2rem;
+}
+.venue-featured-source {
+  font-family: var(--font-utility);
+  font-style: normal;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.9rem;
+}
+
+.venue-section-h { font-size: 1.6rem; margin-top: 3rem; }
+.venue-refs { list-style: none; padding: 0; }
+.venue-refs li, .event-item { border-top: 1px solid var(--rule); padding: 0.9rem 0; }
+.venue-refs a, .event-title a { font-family: var(--font-display); font-size: 1.15rem; text-decoration: none; }
+.event-list { list-style: none; padding: 0; }
+.event-title { font-family: var(--font-display); font-size: 1.15rem; margin-block: 0.3rem; }
+
+.venue-cta {
+  display: inline-block;
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent-deep);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 3px;
+  margin-top: 1.5rem;
+}
+
+/* venues index */
+.container {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 3rem var(--gutter) 4rem;
+}
+.container > h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+.intro {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--muted);
+  max-width: 42ch;
+  margin: 1rem 0 3rem;
+}
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 3rem;
+}
+.venues-group-h {
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+.venues-group-list { list-style: none; padding: 0; }
+.venues-group-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.venues-group-list a { font-family: var(--font-display); font-size: 1.05rem; text-decoration: none; }
+.venue-type {
+  font-family: var(--font-utility);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.subscribe-cta {
+  background: var(--deep);
+  border-radius: 0;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+.subscribe-cta p {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--paper);
+  margin-bottom: 1.25rem;
+}
+.subscribe-cta a {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--paper);
+  font-family: var(--font-utility);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0;
+}
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding: 2.5rem var(--gutter) 3.5rem;
+  text-align: center;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: var(--paper);
+}
+footer a { text-decoration: none; }
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 68rem) {
